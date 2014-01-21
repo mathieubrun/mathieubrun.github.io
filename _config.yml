@@ -3,15 +3,14 @@
 #
 author: Mathieu
 description: One line after another...
-url: http://www.cogimator.net
+url: http://mathieubrun.github.io
 title: Cogimator
 subtitle: one line after another
-gravatar_url: https://2.gravatar.com/avatar/cdf546b601bf29a7eb4ca777544d11cd
 subscribe_rss: http://feeds.feedburner.com/Cogimator
 
 # Github repositories
 github_user: mathieubrun
-github_repo_url: https://github.com/mathieubrun/cogimator.net/
+github_repo_url: https://github.com/mathieubrun/mathieubrun.github.io/
 
 # Disqus Comments
 disqus_short_name: cogimator
