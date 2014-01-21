@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://mathieubrun.github.io/sitemap.xml 
+Sitemap: http://mathieubrun.github.io/sitemap.xml 
