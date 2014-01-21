@@ -1,0 +1,39 @@
+#
+# Blog Settings
+#
+author: Mathieu
+description: One line after another...
+url: http://www.cogimator.net
+title: Cogimator
+subtitle: one line after another
+gravatar_url: https://2.gravatar.com/avatar/cdf546b601bf29a7eb4ca777544d11cd
+subscribe_rss: http://feeds.feedburner.com/Cogimator
+
+# Github repositories
+github_user: mathieubrun
+github_repo_url: https://github.com/mathieubrun/cogimator.net/
+
+# Disqus Comments
+disqus_short_name: cogimator
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-4184817-1
+
+addthis_profile_id: ddsd
+twitter_tweet_button: true
+#
+# Jekyll Settings
+#
+
+# GitHub Defaults
+lsi: false
+pygments: true
+safe: true
+
+# UTF-8 & parse errors fix
+markdown: redcarpet
+permalink: /archive/:year/:month/:day/:title/
+paginate: 20
+paginate_path: "page/:num"
+category_dir: categories
