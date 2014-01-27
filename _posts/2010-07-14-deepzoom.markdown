@@ -1,0 +1,144 @@
+---
+layout: post
+title: "Création d'images zoomables avec DeepZoom."
+date: 2010-07-14 -0800
+categories: [deepzoom, code]
+comments: true
+---
+
+DeepZoom est une technologie Microsoft permettant de visionner des images de très grande taille. Pour le web, cela permet d'éviter le téléchargement d'une image complète avant de pouvoir la visualiser. 
+Plus d'informations sur DeepZoom ici : http://msdn.microsoft.com/fr-fr/library/cc645077%28v=VS.95%29.aspx
+
+Afin de pouvoir convertir vos images, vous devrez disposer de DeepZoom Composer : http://www.microsoft.com/downloads/details.aspx?familyid=457b17b7-52bf-4bda-87a3-fa8a4673f8bf&displaylang=en 
+Une fois l'installation effectuée, vous pourrez référencer DeepZoomTools.dll.
+
+Une fois la dll DeepZoomTools référencée, vous pouvez convertir vos images avec la classe ImageCreator :
+
+```` csharp
+var ic = new ImageCreator();
+ic.Create("input.jpg", "output");
+````
+
+La conversion d'une image est relativement gourmande en CPU et en entrée/sortie disque, du fait des nombreuses images crées.
+
+Néanmoins, l'objet ImageCreator propose quelques propriétés permettant de modifier la taille des fichiers en sortie :
+
+TileSize
+-
+
+Par défaut 256.  Une valeur de 512 produira des "tuiles" plus grandes et permettra de réduire les temps de conversion. Le nombre de fichiers JPG produits sera également réduit.
+
+ConversionImageQuality
+-
+
+Par défaut 0.8, définit la compression JPG des images de sortie. Une valeur plus faible (0.7 par exemple) produira des fichiers plus petits, au prix d'une perte de qualité.
+
+MaxLevel
+-
+
+Pour une image de 3072*2304, l'outil générera 12 niveaux (soit 12 sous dossiers avec les "tuiles"). Cette valeur définit donc le niveau de zoom maximum. Une valeur plus faible accélérera grandement la vitesse de conversion. En effet, plus le niveau de zoom est élevé, plus le nombre de fichiers JPG produit sera grand.
+
+Pourquoi modifier ces paramètres ?
+-
+
+Dans le cas de conversion à la volée, ou de conversion en masse, il peut devenir intéressant d'optimiser les temps de conversion. De la même manière, si les images converties sont beaucoup consultées, il est important de tenir compte de la taille et du nombre des fichiers de sortie.
+
+Le code suivant met en évidence l'influence de chaque paramètre sur le temps de conversion, la taille de l'image convertie, ainsi que le nombre de fichiers générés.
+
+```` csharp
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Microsoft.DeepZoomTools;
+
+namespace DZC
+{
+    class Program
+    {
+        const string INPUT = "input.jpg";
+        static void Main(string[] args)
+        {
+            var tileSizes = new int[] { 256, 512, 768 };
+            var compressions = new double[] { 0.7, 0.8 };
+            var maxLevels = new int[] { 12, 11, 10 };
+
+            Console.WriteLine("Taille fichier entree : {0}", new FileInfo(INPUT).Length);
+            Console.WriteLine();
+
+            foreach (var maxLevel in maxLevels)
+            {
+                foreach (var compression in compressions)
+                {
+                    foreach (var tileSize in tileSizes)
+                    {
+                        Convert(maxLevel, compression, tileSize);
+                    }
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Convert(int maxLevel, double compression, int tileSize)
+        {
+            var sw = new Stopwatch();
+            var times = new List<double>();
+
+            var output = string.Format("M{0}C{1}T{2}", maxLevel, compression * 10, tileSize);
+
+            if (Directory.Exists(output))
+            {
+                Directory.Delete(output, true);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                sw.Start();
+
+                var ic = new ImageCreator();
+                ic.TileSize = tileSize;
+                ic.MaxLevel = maxLevel;
+                ic.ConversionImageQuality = compression;
+
+                ic.Create(INPUT, output);
+
+                times.Add(sw.Elapsed.TotalSeconds);
+
+                sw.Stop();
+                sw.Reset();
+            }
+
+            Console.WriteLine("MaxLevel : {0}, Compression {1:0.0}, TileSize {2}", maxLevel, compression, tileSize);
+            Console.WriteLine("Duree : {0:0.00}", times.Average());
+            Console.WriteLine("Nombre fichiers : {0}", GetFilesCount(output + "_files"));
+            Console.WriteLine("Taille sortie : {0}", GetSize(output + "_files"));
+            Console.WriteLine();
+        }
+
+        static long GetSize(string directory)
+        {
+            var d = new DirectoryInfo(directory);
+
+            return d.GetFiles().Sum(x => x.Length)
+                + d.GetDirectories().Sum(x => GetSize(x.FullName));
+        }
+
+        static long GetFilesCount(string directory)
+        {
+            var d = new DirectoryInfo(directory);
+
+            return d.GetFiles().Length
+                + d.GetDirectories().Sum(x => GetFilesCount(x.FullName));
+        }
+    }
+}
+````
+
+Liens utiles
+-
+
+- http://www.seadragon.com
+- http://www.asp.net/ajax/ajaxcontroltoolkit/Samples/Seadragon/Seadragon.aspx
+- http://www.seadragon.com/developer/ajax/
