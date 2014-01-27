@@ -24,6 +24,6 @@ single: true
 {% if site.disqus_short_name and page.comments == true %}
 <section id="comment">
     <h2>Comments</h2>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+    <div id="disqus_thread" aria-live="polite">{% include disqus.html %}</div>
 </section>
 {% endif %}

@@ -19,8 +19,8 @@ disqus_show_comment_count: true
 # Google Analytics
 google_analytics_tracking_id: UA-4184817-1
 
-addthis_profile_id: ddsd
-twitter_tweet_button: true
+addthis_profile_id: ra-52e6c6e305561232
+
 #
 # Jekyll Settings
 #
@@ -33,6 +33,8 @@ safe: true
 # UTF-8 & parse errors fix
 markdown: redcarpet
 permalink: /archive/:year/:month/:day/:title/
-paginate: 20
+paginate: 5
 paginate_path: "page/:num"
 category_dir: categories
+
+
