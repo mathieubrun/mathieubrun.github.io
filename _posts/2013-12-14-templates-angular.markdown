@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mise en cache intelligente des templates AngularJS"
-date: 2013-12-08 -0800
+date: 2013-12-14 -0800
 categories: [angularjs, code]
 comments: true
 ---
@@ -38,7 +38,7 @@ Jusqu'au lendemain 8h, le client A utilisera une version potentiellement obsolè
 
 Pour eviter cela, je vais mettre en place un mécanisme permettant d'assurer le bon fonctionnement du cache, tout en utilisant les derniers fichiers disponibles de l'application.
 
-Dans un premier temps, il faut fournir un numéro identifiant l'application déployée. J'ai choisi d'utiliser la date de création d'un assembly du projet Web. Pour cela, j'ai intégré une simple balise script déclarant une constante AngularJs :
+Dans un premier temps, il faut fournir un numéro identifiant l'application déployée. J'ai choisi d'utiliser la date de création d'un assembly du projet Web. Pour cela, j'ai intégré une simple balise script déclarant une [constante AngularJs](http://docs.angularjs.org/api/AUTO.$provide#methods_constant) :
 
 ```` html
 <script type="text/javascript"> 
@@ -47,7 +47,7 @@ Dans un premier temps, il faut fournir un numéro identifiant l'application dép
 </script>
 ````
 
-La suite de l'implémentation est aisée, grâce au système de HttpInterceptors fourni par AngularJs. Ces HttpInterceptors permettent de modifier les requêtes envoyées et reçues par le service $http.
+La suite de l'implémentation est aisée, grâce au système de HttpInterceptors fourni par AngularJs. Ces [HttpInterceptors](http://docs.angularjs.org/api/ng.$http#description_interceptors) permettent de modifier les requêtes envoyées et reçues par le service $http.
 
 ```` javascript
 .factory('SmartCacheInterceptor', ['$q', 'SampleApplicationVersion', function ($q, SampleApplicationVersion) { 
@@ -65,6 +65,6 @@ La suite de l'implémentation est aisée, grâce au système de HttpInterceptors
 
 Voici les résultats dans fiddler. Les requêtes sur l'url "/" correspondent a un rafraichissement de la page du navigateur. Le serveur web utilisé est IIS Express, sans paramétrage spécifique.
 
-![2013-12-14-templates-angular](/img/2013-12-14-templates-angular.png)
+![Capture fiddler](/img/2013-12-14-templates-angular.png)
 
 Le code source est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web)
