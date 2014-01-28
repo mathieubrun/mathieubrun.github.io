@@ -1,5 +1,5 @@
 body {
-  padding-top: 40px;
+	padding-top: 75px;
 }
 
 #footer {
@@ -9,5 +9,22 @@ body {
 
 #footer  p {
 	margin: 20px 0;
-	text-align: center;
+}
+
+article.post {
+	padding-bottom: 60px;
+	border-bottom: 2px dashed #cacaca;
+	margin-bottom: 60px;
+}
+
+nav .previous:before {
+	content: '\00AB\00a0'
+}
+
+nav .next:after {
+	content: '\00a0\00BB'
+}
+
+#comment {
+	min-height: 300px
 }

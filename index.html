@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% if paginator.previous_page %}
+<nav>
+	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}" class="pull-left previous">Articles précédents</a>
+</nav>
+{% endif %}
+
 {% assign index = true %}
 <div itemscope itemtype="http://schema.org/Blog">
 	{% for post in paginator.posts %}
@@ -9,16 +15,11 @@ layout: default
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         {% include article.html %}
     </article>
-{% endfor %}
+	{% endfor %}
 </div>
 
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next</a>
-    {% endif %}
-	
-    <div class="center"><a href="/archive">Blog Archives</a></div>
+{% if paginator.next_page %}
+<nav>
+	<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pull-right next">Articles suivants</a>
 </nav>
+{% endif %}
