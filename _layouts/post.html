@@ -6,7 +6,7 @@ single: true
 {% if page.previous.url %}
 <div class="row">
 	<nav class="col-xs-12">
-		Article précédent : <a href="{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a>
+		<h4>Article précédent : <a href="{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a></h4>
 	</nav> 
 </div>
 {% endif %} 
@@ -20,7 +20,7 @@ single: true
 {% if page.next.url %}
 <div class="row">
 	<nav class="col-xs-12 text-right">
-		Article suivant : <a href="{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a>
+		<h4>Article suivant : <a href="{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a></h4>
 	</nav> 
 </div>
 {% endif %} 

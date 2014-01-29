@@ -17,6 +17,10 @@ article.post {
 	margin-bottom: 60px;
 }
 
+article section a {
+	font-weight: bold;
+}
+
 nav .previous:before {
 	content: '\00AB\00a0'
 }
