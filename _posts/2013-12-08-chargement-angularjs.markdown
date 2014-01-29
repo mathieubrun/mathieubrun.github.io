@@ -6,7 +6,7 @@ categories: [angularjs,code]
 comments: true
 ---
 
-Depuis la version 1.2.0 de AngularJs, le service $resource retourne des promise lors des appels aux méthodes get, query, save... Ceci ouvre des possibilités intéressantes, notamment la mise en place rapide d'indication de chargement.
+Depuis la version 1.2.0 de AngularJs, le service [$resource](http://docs.angularjs.org/api/ngResource.$resource) retourne des promise lors des appels aux méthodes get, query, save... Ceci ouvre des possibilités intéressantes, notamment la mise en place rapide d'indication de chargement.
 
 Pour ce faire, j'ai choisi d'implémenter une directive, afin de pouvoir déclarer mon Loader ainsi :
 
@@ -16,7 +16,7 @@ Pour ce faire, j'ai choisi d'implémenter une directive, afin de pouvoir déclar
 </div>
 ````
 
-Ceci va donc orienter la déclaration de la directive, pour utiliser la transclusion et un scope isolé :
+Ceci va donc orienter la déclaration de la directive, pour utiliser la [transclusion](http://docs.angularjs.org/api/ng.directive:ngTransclude) et un scope isolé :
 
 ```` javascript
 .directive('loader', ['$q', function ($q) { 
@@ -56,7 +56,7 @@ Ensuite il faut écrire la fonction link pour réagir aux évènements du promis
     } 
 }])
 ```` 
-Le $watch permet de réagir à une assignation de la valeur en chargement, notamment lors de l'appel à une fonction de rechargement de données. Pour obtenir une référence sur l’objet promise renvoyé par $resource, il faut passer par la propriété $promise de celui-ci
+La fonction $watch de l'objet scope permet de réagir à une assignation de la valeur en chargement; notamment lors de l'appel à une fonction de rechargement de données. Pour obtenir une référence sur l'objet promise renvoyé par $resource, il faut passer par la propriété $promise de celui-ci
 
 Enfin, pour afficher tout ça, il nous faut un template :
 
