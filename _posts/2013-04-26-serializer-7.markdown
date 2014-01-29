@@ -6,7 +6,7 @@ categories: [c#, code]
 comments: true
 ---
 
-La dernière ligne droite dans l'implémentation de ce Serializer était d'avoir des performances similaires (ou meilleures!) à celles du BinaryFormatter du Framework .Net. En utilisant uniquement la reflection, ce n'était pas gagné d'avance.
+La dernière ligne droite dans l'implémentation de ce Serializer était d'avoir des performances similaires (ou meilleures!) à celles du [BinaryFormatter](http://msdn.microsoft.com/en-us/library/system.runtime.serialization.formatters.binary.binaryformatter.aspx) du Framework .Net. En utilisant uniquement la reflection, ce n'était pas gagné d'avance.
 
 ```` csharp
 foreach (var prop in type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public).OrderBy(x => x.Name))
@@ -19,7 +19,7 @@ foreach (var prop in type.GetFields(BindingFlags.NonPublic | BindingFlags.Instan
 
 En effet, a chaque serialisation de la meme classe, ce code va récupérer les champs, encore et encore, ce qui n'est de loin pas efficace.
 
-L'optimisation que j'ai choisi a été de remplacer l'utilisation de la reflection par la création de LambdaExpression basées sur les champs des objets a sérialiser.
+L'optimisation que j'ai choisi a été de remplacer l'utilisation de la reflection par la création de [LambdaExpression](http://msdn.microsoft.com/en-us/library/system.linq.expressions.lambdaexpression.aspx) basées sur les champs des objets a sérialiser.
 
 ```` csharp
 gettersForType = new List<Tuple<Type, Func<object, object>>>();
@@ -35,7 +35,7 @@ foreach (var prop in sourceType.GetFields(BindingFlags.NonPublic | BindingFlags.
 
 Ici, la reflection sera utilisée une fois pour obtenir la liste des champs, et générer les Getters qui permettront d'en lire les valeurs.
 
-La méthode CreateGetter va retourner un Func après avoir crée et compilé une LambdaExpression.
+La méthode CreateGetter va retourner un Func<object, object> après avoir crée et compilé une LambdaExpression.
 
 ```` csharp
 private static Func<object, object> CreateGetter(FieldInfo field)
@@ -66,7 +66,7 @@ Les éléments clés dans cette méthode sont :
 - La récupération d'une expression renvoyant la valeur du champ
 - Le cast de cette valeur en object pour la renvoyer.
 
-De la même manière, j'avais implémenté une méthode CreateSetter, qui elle renvoyait un Action<object,object>. Cette méthode, créée a la volée pour un champ donné, prenait en paramètre l'objet en cours de désérialisation, ainsi que la valeur a assigner au champ.
+De la même manière, j'avais implémenté une méthode CreateSetter, qui elle renvoyait un Action<object, object>. Cette méthode, créée a la volée pour un champ donné, prenait en paramètre l'objet en cours de désérialisation, ainsi que la valeur à assigner au champ.
 
 ```` csharp
 private static Action<object, object> CreateSetter(FieldInfo field)
@@ -181,4 +181,4 @@ l'appel a la méthode DeserializeBase, afin de s'appuyer sur les mécanismes imp
 
 Cette optimisation a permi de diviser par 3 le temps de serialisation/deserialisation (10000 iterations) d'une classe simple.
 
-Comme toujours, le code est disponible sur github : https://github.com/mathieubrun/Cogimator.Serialization
+Comme toujours, le code est disponible sur [github](https://github.com/mathieubrun/Cogimator.Serialization)
