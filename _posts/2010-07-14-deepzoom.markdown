@@ -7,9 +7,10 @@ comments: true
 ---
 
 DeepZoom est une technologie Microsoft permettant de visionner des images de très grande taille. Pour le web, cela permet d'éviter le téléchargement d'une image complète avant de pouvoir la visualiser. 
-Plus d'informations sur DeepZoom ici : http://msdn.microsoft.com/fr-fr/library/cc645077%28v=VS.95%29.aspx
 
-Afin de pouvoir convertir vos images, vous devrez disposer de DeepZoom Composer : http://www.microsoft.com/downloads/details.aspx?familyid=457b17b7-52bf-4bda-87a3-fa8a4673f8bf&displaylang=en 
+[Plus d'informations sur DeepZoom](http://msdn.microsoft.com/fr-fr/library/cc645077%28v=VS.95%29.aspx).
+
+Afin de pouvoir convertir vos images, vous devrez disposer de [DeepZoom Composer](http://www.microsoft.com/downloads/details.aspx?familyid=457b17b7-52bf-4bda-87a3-fa8a4673f8bf&displaylang=en)   
 Une fois l'installation effectuée, vous pourrez référencer DeepZoomTools.dll.
 
 Une fois la dll DeepZoomTools référencée, vous pouvez convertir vos images avec la classe ImageCreator :
@@ -139,6 +140,6 @@ namespace DZC
 Liens utiles
 -
 
-- http://www.seadragon.com
-- http://www.asp.net/ajax/ajaxcontroltoolkit/Samples/Seadragon/Seadragon.aspx
-- http://www.seadragon.com/developer/ajax/
+- [http://www.seadragon.com](http://www.seadragon.com)
+- [http://www.asp.net/ajax/ajaxcontroltoolkit/Samples/Seadragon/Seadragon.aspx](http://www.asp.net/ajax/ajaxcontroltoolkit/Samples/Seadragon/Seadragon.aspx)
+- [http://www.seadragon.com/developer/ajax/](http://www.seadragon.com/developer/ajax/)

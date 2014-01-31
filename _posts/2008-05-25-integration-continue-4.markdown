@@ -16,9 +16,9 @@ Microsoft Source Analysis Tool for C# peut être téléchargé ici : http://code
 Intégration dans vos projets
 -
 
-Une fois l'outil installé, une nouvelle entrée apparait dans le menu "Outils" de Visual Studio : "Run Source Analysis". Elle vous permet d'exécuter l'analyse du code directement dans Visual Studio, et affichera les résultats dans l'onglet "Source Analysis". Un double clc sur un message vous emmene sur la ligne concerné. Rien d'inhabituel donc.
+Une fois l'outil installé, une nouvelle entrée apparait dans le menu "Outils" de Visual Studio : "Run Source Analysis". Elle vous permet d'exécuter l'analyse du code directement dans Visual Studio, et affichera les résultats dans l'onglet "Source Analysis". Un double clic sur un message vous emmene sur la ligne concernée. Rien d'inhabituel donc.
 
-Il est également possible d'intégrer l'analyse de votre code source directement dans le procéssus de build, et là, celà devient vraiment intéressant : lorsqu'un développeur lancera une compilation, toutes les erreurs liées à l'analyse du code source apparaitront en tant que warning dans l'onglet "Liste d'erreurs".
+Il est également possible d'intégrer l'analyse de votre code source directement dans le processus de build, et là, celà devient vraiment intéressant : lorsqu'un développeur lancera une compilation, toutes les erreurs liées à l'analyse du code source apparaitront en tant que warning dans l'onglet "Liste d'erreurs".
 
 Pour permettre cela, deux solutions :
 
@@ -52,7 +52,7 @@ Pour faire suite au billet sur l'arborescence projet, vous pouvez maintenant raj
 
 Ensuite, intégrez ce répertoire dans le contrôle de code source. Les développeurs bénéficieront de l'analyse de code source dès qu'ils mettront leur copie locale à jour. Lors du premier rechargement du projet, vous obtiendrez un message d'avertissement :
 
-![TODO](/img/2008-05-25-integration-continue-4.png)
+![Avertissement de sécurité](/img/2008-05-25-integration-continue-4.png)
 
 Choisissez de charger normalement le projet.
 
