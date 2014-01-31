@@ -6,7 +6,8 @@ categories: [integration continue]
 comments: true
 ---
 
-Tout d'abord, un test unitaire, quesako ? Un test unitaire est un bout de code qui va tester un bout de code de votre application. Unitairement. La partie "unitairement" signifie qu'on va tester une "unité" de notre code, par exemple, une classe et ses méthodes. Si on commence à tester plusieurs classes ensemble, on parlera plutôt de tests d'intégration. Même si dans la pratique, l'outil (NUnit) restera le même.
+Tout d'abord, un test unitaire, quesako ?  
+Un test unitaire est un bout de code qui va tester un bout de code de votre application. Unitairement. La partie "unitairement" signifie qu'on va tester une "unité" de notre code, par exemple, une classe et ses méthodes. Si on commence à tester plusieurs classes ensemble, on parlera plutôt de tests d'intégration. Même si dans la pratique, l'outil (NUnit) restera le même.
 
 Prenons une méthode "simple" :
 

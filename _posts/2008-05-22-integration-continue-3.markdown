@@ -8,13 +8,13 @@ comments: true
 
 Avant d'aller plus loin, je vais rapidement décrire l'arborescence projet que je vais utiliser pour les billets à venir (cf image):
 
-![TODO](/img/2008-05-22-integration-continue-3.png)
+![Arborescence projet](/img/2008-05-22-integration-continue-3.png)
 
-- Apps : applications Winforms, Console, WebForms, tout ce qui est exécutable
-- Libs : toutes les bibliothèques de classes, ou tout ce qui n'est pas exécutable
-- References : toutes les librairies externes référencéés dans votre solution (NHibernate, Castle Project, etc)(non présent dans la solution visual studio, uniquement dans l'arborescence "physique")
-- Scripts : scripts de compilation, de création de base de données
-- Tests : tests unitaires
+- **Apps** : applications Winforms, Console, WebForms, tout ce qui est exécutable
+- **Libs** : toutes les bibliothèques de classes, ou tout ce qui n'est pas exécutable
+- **References** : toutes les librairies externes référencéés dans votre solution (NHibernate, Castle Project, etc)(non présent dans la solution visual studio, uniquement dans l'arborescence "physique")
+- **Scripts** : scripts de compilation, de création de base de données
+- **Tests** : tests unitaires
 
 Important : si vous créez des dossiers de solution dans Visual Studio, attention lors de la création d'un nouveau projet : par défaut, celui-ci est placé à la racine de votre dossier de solution. Il en est de même pour les éléments de solution (par ex : Demo.config et Demo.nunit), il est préférable de les créer physiquement dans le dossier voulu, et de les ajouter à la solution dans un deuxième temps (via "Ajouter un élément existant").
 

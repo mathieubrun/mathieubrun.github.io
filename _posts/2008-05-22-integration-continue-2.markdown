@@ -6,7 +6,7 @@ categories: [integration continue]
 comments: true
 ---
 
-Pour cette partie sur le contrôle de code source, nous allons mettre en place et utiliser Subversion. Il vous faudra télécharger VisualSVN Server (http://www.visualsvn.com/server/), ainsi que TortoiseSVN (http://tortoisesvn.tigris.org/). Vous pouvez également installer AnkhSVN (http://ankhsvn.open.collab.net/) si vous souhaitez bénéficier de l'intégration dans Visual Studio (attention, pour Visual Studio 2008, prenez bien la version 1.0.3 ou supérieure).
+Pour cette partie sur le contrôle de code source, nous allons mettre en place et utiliser Subversion. Il vous faudra télécharger [VisualSVN Server](http://www.visualsvn.com/server/), ainsi que [TortoiseSVN](http://tortoisesvn.tigris.org/). Vous pouvez également installer [AnkhSVN](http://ankhsvn.open.collab.net/) si vous souhaitez bénéficier de l'intégration dans Visual Studio (attention, pour Visual Studio 2008, prenez bien la version 1.0.3 ou supérieure).
 
 Une fois VisualSVN Server installé sur le serveur, TortoiseSVN et AnkhSVN installés sur les clients, nous allons pouvoir commencer.
 
@@ -39,15 +39,15 @@ Après avoir installé TortoiseSVN, créez un nouveau dossier (par ex: d:\Integr
 
 Ensuite, toujours dans ce dossier : faites un clic droit -> TortoiseSVN -> Settings. Dans l'entrée "General", "Subversion", "Global ignore patterns", vous pouvez saisir "bin obj *.suo *.user". Ceci indiquera a TortoiseSVN de toujours ignorer ces répertoires et ces fichiers, et évitera de placer les exécutables ainsi que les fichiers temporaires de compilation sous controle de code source. Les paramètres de solution/projet par utilisateur ne seront également pas placés sous contrôle de code source.
 
-![TODO](/img/2008-05-22-integration-continue-2.png)
+![Configuration TortoisSVN](/img/2008-05-22-integration-continue-2.png)
 
 Il est également possible de définir quels fichiers/répertoires seront ignorés, et ce par projet, dans la fenêtre de commit :
 
-![TODO](/img/2008-05-22-integration-continue-21.png)
+![Configuration TortoisSVN](/img/2008-05-22-integration-continue-21.png)
 
 Enfin, tant que vous êtes dans les paramètres de TortoiseSVN, vous pouvez également ajouter les valeurs suivantes dans la partie "Icon overlays" :
 
-![TODO](/img/2008-05-22-integration-continue-22.png)
+![Configuration TortoisSVN](/img/2008-05-22-integration-continue-22.png)
 
 Cela vous évitera des petits soucis de fichiers vérouillés aléatoirement.
 
@@ -69,11 +69,11 @@ Ce qui nous amène à une première version du processus de mise à jour du code
 
 1. Bob (notre développeur) fait un update de sa copie locale pour obtenir la dernière version du code source 
 2. Bob fait une modification dans le code 
-     2.1 Si le code ne compile pas, retour en 2. 
-     2.2 Si le code compile, passer en 3. 
+  1. Si le code ne compile pas, retour en 2. 
+  2. Si le code compile, passer en 3. 
 3. Bob fait un update de sa copie locale pour obtenir les modifications qui auraient été effectuées depuis 1. 
-     3.1 Si le code ne compile pas, retour en 2. 
-     3.2 Si le code compile, passer en 4. 
+  1. Si le code ne compile pas, retour en 2. 
+  2. Si le code compile, passer en 4. 
 4. Bob fait un commit pour mettre à jour le code source sur SVN.
 
 Le point 3 est important, il permet de s'assurer que les modifications effectuées en 2 ne sont pas incompatibles avec une éventuelle modification ayant eu lieu entre 1 et 3.
