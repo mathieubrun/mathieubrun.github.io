@@ -83,3 +83,5 @@ En résumé, pour la sérialisation, on identifie chaque objet sérialisé, et s
 La subtilité concerne les références cycliques : il faut placer l'objet dans le cache juste après sa création, car lorsque l'on va désérialiser les propriétés de l'objet, on pourrait rencontrer une référence vers un objet que l'on n'aurait pas encore désérialisé.
 
 Comme toujours, les tests unitaires permettent de valider que les modifications n'entrainent pas de régressions.
+
+Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Cogimator.Serialization/tree/5bb1ee0197580c26809da0a570f78d62897f84e0), ainsi que la [dernière version](https://github.com/mathieubrun/Cogimator.Serialization).
