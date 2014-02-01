@@ -12,6 +12,29 @@ Avec la propriété Array.Rank ainsi que la méthode Array.GetLength(int), je pe
 
 La méthode Array.GetValue(int[]) permet de récupérer la valeur dans le tableau en fonction des indices passés en paramètre. Le calcul de tous les indices se fait en deux étapes. Dans un premier temps, il faut déterminer les indices possibles pour chaque dimension du tableau, en fonction de sa longueur. Ensuite, il reste à calculer le produit cartésien de tous ces indices. Cet ensemble servira à sérialiser l'ensemble des valeurs du tableau.
 
+```` csharp
+if (type.IsArray)
+{
+	var arr = source as Array;
+	var dims = new int[arr.Rank];
+
+	writer.Write(arr.Rank);
+
+	for (int i = 0; i < dims.Length; i++)
+	{
+		dims[i] = arr.GetLength(i);
+		writer.Write(dims[i]);
+	}
+
+	foreach (var indice in CartesianProduct(GetDimensionsAndLengths(dims)))
+	{
+		SerializeBase(type.GetElementType(), arr.GetValue(indice.ToArray()), writer);
+	}
+
+	return;
+}
+````
+
 La désérialisation est simplement le procédé inverse.
 
-Le code source est disponible sur GitHub : https://github.com/mathieubrun/Cogimator.Serialization/blob/master/Cogimator.Serialization/ReflectionSerializer.cs
+Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Cogimator.Serialization/tree/7ab8d542c1bb2227d4d1bd8917192eb055e4c874), ainsi que la [dernière version](https://github.com/mathieubrun/Cogimator.Serialization).
