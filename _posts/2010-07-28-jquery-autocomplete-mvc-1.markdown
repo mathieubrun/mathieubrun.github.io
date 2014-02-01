@@ -82,10 +82,10 @@ Dans le code JavaScript :
 
 Il ne nous reste plus qu'à tester :
 
-![TODO](/img/2010-07-28-jquery-autocomplete-mvc-1.png)
+![Autocomplete](/img/2010-07-28-jquery-autocomplete-mvc-1.png)
 
 Lorsque que l'on sélectionne un élément, la valeur de sa propriété value est renseigné dans la deuxième TextBox
 
-![TODO](/img/2010-07-28-jquery-autocomplete-mvc-11.png)
+![Autocomplete](/img/2010-07-28-jquery-autocomplete-mvc-11.png)
 
 Dans les prochains billets, nous verrons comment capitaliser cela dans une méthode d'extension de HtmlHelper, et comment personnaliser les paramètres envoyés par JQuery.

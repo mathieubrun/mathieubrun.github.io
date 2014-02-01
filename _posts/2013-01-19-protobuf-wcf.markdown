@@ -5,9 +5,9 @@ date: 2013-01-19 -0800
 categories: [wcf, code]
 comments: true
 ---
-Protobuf-net est l'implémentation .NET de protocol buffers mis au point par Google, qui l'utilise comme protocole de communication pour ses échanges de données. L'objectif est d'obtenir une sérialisation binaire de faible taille (largement moindre qu'une sérialisation XML par exemple), et peu coûteuse a sérialiser et désérialiser, autant coté serveur que client.
+[Protobuf-net](https://code.google.com/p/protobuf-net/) est l'implémentation .NET de protocol buffers mis au point par Google, qui l'utilise comme protocole de communication pour ses échanges de données. L'objectif est d'obtenir une sérialisation binaire de faible taille (largement moindre qu'une sérialisation XML par exemple), et peu coûteuse a sérialiser et désérialiser, autant coté serveur que client.
 
-L'intérêt de protobuf-net est le gain en performances offert, grâce a une sérialisation plus efficace que le DataContractSerializer utilisé par défaut dans WCF.En utilisant des entités Linq-to-Sql générées à partir de la base Northwind :
+L'intérêt de protobuf-net est le gain en performances offert, grâce a une sérialisation plus efficace que le DataContractSerializer utilisé par défaut dans WCF. En utilisant des entités Linq-to-Sql générées à partir de la base Northwind :
 
 - Sérialisation 3x plus rapide
 - Désérialisation 4x plus rapide
@@ -53,7 +53,7 @@ public class CompositeTypeChild
 }
 ````
 
-Modifier la configuration du serveur, en rajoutant un endpointBehavior
+Modifier la configuration du serveur, en rajoutant un endpointBehavior :
 
 ```` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -87,7 +87,7 @@ Modifier la configuration du serveur, en rajoutant un endpointBehavior
 </configuration>
 ````
 
-Modifier la configuration du client
+Modifier la configuration du client :
 
 ```` xml
 <?xml version="1.0" encoding="utf-8" ?>

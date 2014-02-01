@@ -6,7 +6,7 @@ categories: [wcf, code]
 comments: true
 ---
 
-Parfois on peut être améné a déclarer un service de manière générique :
+Parfois on peut être améné à vouloir déclarer un service de manière générique :
 
 ```` csharp
 public class GenericService<T> : IGenericService<T> where T : EntityBase, new()
@@ -29,4 +29,4 @@ Toutefois, le service ainsi déclaré ne pourra pas être utilisé dans IIS sans
     CodeBehind="GenericService.cs" %>
 ````
 
-Exemple complet sur : https://github.com/mathieubrun/Cogimator.Samples
+Exemple complet sur : [GitHub](https://github.com/mathieubrun/Cogimator.Samples).

@@ -6,7 +6,7 @@ categories: [wpf, code]
 comments: true
 ---
 
-Parfois il peut arriver d'avoir besoin de baser un style sur un autre déclaré sans x:Key (s'applicant donc a tous les éléments correspondant à l'attribut TargetType. Ici; la clé est de déclarer l'attribut BasedOn avec non pas une ressource, mais le type de l'élément sur lequel appliquer le style.
+Parfois il peut arriver d'avoir besoin de baser un style sur un autre déclaré sans x:Key, s'applicant donc a tous les éléments correspondant à l'attribut TargetType. Ici, la clé est de déclarer l'attribut BasedOn avec non pas une ressource, mais le type de l'élément sur lequel appliquer le style.
 
 ```` xml
 <Page

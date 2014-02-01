@@ -66,4 +66,4 @@ Enfin, les données renvoyées par le Controller sont passés a jquery.ui.autoco
 
 Et le résultat :
 
-![TODO](/img/2010-07-31-jquery-autocomplete-mvc-2.png)
+![Autocomplete](/img/2010-07-31-jquery-autocomplete-mvc-2.png)

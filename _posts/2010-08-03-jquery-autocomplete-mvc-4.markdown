@@ -73,6 +73,6 @@ $(document).ready(function () {
 
 Et le résultat :
 
-![TODO](/img/2010-08-03-jquery-autocomplete-mvc-4.png)
+![Autocomplete](/img/2010-08-03-jquery-autocomplete-mvc-4.png)
 
 Pour terminer cette série, nous verrons comment créer une méthode d'extension pour capitaliser les cas simples (libellé et identifiant).
