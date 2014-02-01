@@ -60,4 +60,4 @@ Et pour finir, il reste juste a ajouter les éléments dans un conteneur :
 
 Tout le reste est géré par WPF, qui, au travers des DataTemplates et du Binding affichera les contrôles nécessaires pour remplir nos éléments.
 
-Le code source complèt est disponible sur : https://github.com/mathieubrun/Cogimator.Samples
+Le code source complet est disponible sur [Github](https://github.com/mathieubrun/Cogimator.Samples)

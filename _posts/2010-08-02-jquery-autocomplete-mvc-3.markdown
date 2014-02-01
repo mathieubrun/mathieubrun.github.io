@@ -70,4 +70,4 @@ La fonction "_renderItem" permet de contrôler le rendu de la liste d'auto compl
 
 Le résultat :
 
-![TODO](/img/2010-08-02-jquery-autocomplete-mvc-3.png)
+![Autocomplete](/img/2010-08-02-jquery-autocomplete-mvc-3.png)
