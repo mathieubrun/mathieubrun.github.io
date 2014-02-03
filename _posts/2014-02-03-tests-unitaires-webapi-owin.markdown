@@ -182,7 +182,7 @@ public class OwinRequestScopeAccessor : IScopeAccessor
 {
 	public void Dispose()
 	{
-		var scope = WindsorOwinRequestModule.YieldScope();
+		var scope = OwinRequestLifeTimeManager.YieldScope();
 		if (scope != null)
 		{
 			scope.Dispose();
@@ -191,7 +191,7 @@ public class OwinRequestScopeAccessor : IScopeAccessor
 
 	public ILifetimeScope GetScope(CreationContext context)
 	{
-		return WindsorOwinRequestModule.GetScope();
+		return OwinRequestLifeTimeManager.GetScope();
 	}
 }
 ````
