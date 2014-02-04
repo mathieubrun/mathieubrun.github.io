@@ -7,10 +7,10 @@ categories: [personal]
 sharing: false
 ---
 
-## Who I am
+## Qui je suis
 
-## What I do
+## Ce que je fais
 
-## Why I do it
+## Pourquoi je le fais
 
-## What I do for fun
+## Ce que j'aime faire en dehors
