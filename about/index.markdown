@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About me"
+title: "A propos"
 date: 2014-01-01
 comments: false
 categories: [personal]
