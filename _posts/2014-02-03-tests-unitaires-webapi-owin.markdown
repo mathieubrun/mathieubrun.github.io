@@ -84,17 +84,39 @@ Nous pouvons donc écrire un premier test :
 [TestClass]
 public class NamesControllerTest : ControllerTestBase
 {
+	protected static readonly string baseAddress = "http://localhost:9000/";
+	protected static IDisposable app;
+
+	/// <summary>
+	/// Start the self hosted server once per assembly
+	/// </summary>
+	/// <param name="context"></param>
+	[AssemblyInitialize]
+	public static void AssemblyInitialize(TestContext context)
+	{
+		app = WebApp.Start<Startup>(baseAddress);
+	}
+
+	/// <summary>
+	/// Do not forget to clean up !
+	/// </summary>
+	[AssemblyCleanup]
+	public static void AssemblyCleanup()
+	{
+		if (app != null)
+		{
+			app.Dispose();
+		}
+	}
+	
 	[TestMethod]
 	public void Valid_prefix_must_return_OK()
 	{
-		using (WebApp.Start<Startup>("http://localhost:9000/"))
+		using (var client = new HttpClient())
 		{
-			using (var client = new HttpClient())
-			{
-				var response = client.GetAsync("http://localhost:9000/api/names/A").Result;
+			var response = client.GetAsync("http://localhost:9000/api/names/A").Result;
 
-				Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-			}
+			Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
 		}
 	}
 }
@@ -105,10 +127,10 @@ public class Startup
 	{
 		var config = new HttpConfiguration();
 
-		WindsorConfig.Register<OwinRequestScopeAccessor>(config);
+		var container = WindsorConfig.Register<LifetimeScopeAccessor>(config);
 		WebApiConfig.Register(config);
 
-		appBuilder.Use<WindsorOwinRequestModule>();
+		appBuilder.Use<OwinRequestLifeTimeManager>(container);
 		appBuilder.UseWebApi(config);
 		
 		config.EnsureInitialized();
@@ -129,73 +151,27 @@ Pour pouvoir tout de même limiter la durée de vie des composants enregistrés 
 /// </remarks>
 public class OwinRequestLifeTimeManager : OwinMiddleware
 {
-	public OwinRequestLifeTimeManager(OwinMiddleware next)
+	private readonly IWindsorContainer container;
+
+	public OwinRequestLifeTimeManager(OwinMiddleware next, IWindsorContainer container)
 		: base(next)
 	{
+		this.container = container;
 	}
 
 	public override Task Invoke(IOwinContext context)
 	{
-		using (var scope = GetScope())
+		using (new CallContextLifetimeScope(container))
 		{
+			// subsequent middlewares are executed inside this scope
 			return Next.Invoke(context);
 		}
 	}
-
-	internal static ILifetimeScope GetScope()
-	{
-		return GetScope(createIfNotPresent: true);
-	}
-
-	internal static ILifetimeScope YieldScope()
-	{
-		var scope = GetScope(createIfNotPresent: true);
-		if (scope != null)
-		{
-			scopeHolder = null;
-		}
-		return scope;
-	}
-
-	private static ILifetimeScope scopeHolder;
-
-	private static ILifetimeScope GetScope(bool createIfNotPresent)
-	{
-		var candidates = scopeHolder;
-		if (candidates == null && createIfNotPresent)
-		{
-			candidates = new DefaultLifetimeScope(new ScopeCache());
-			scopeHolder = candidates;
-		}
-		return candidates;
-	}
 }
 ````
 
-Ainsi qu'un IScopeAccessor :
+Ce middleware OWIN encapsule l'execution des middleware suivants (dont Web API) dans un scope spécifique, afin de "simuler" le comportement du PerWebRequestLifestyle.
 
-```` csharp
-/// <remarks>
-/// Inspired from : https://github.com/castleproject/Windsor/blob/master/src/Castle.Windsor/MicroKernel/Lifestyle/WebRequestScopeAccessor.cs
-/// </remarks>
-public class OwinRequestScopeAccessor : IScopeAccessor
-{
-	public void Dispose()
-	{
-		var scope = OwinRequestLifeTimeManager.YieldScope();
-		if (scope != null)
-		{
-			scope.Dispose();
-		}
-	}
-
-	public ILifetimeScope GetScope(CreationContext context)
-	{
-		return OwinRequestLifeTimeManager.GetScope();
-	}
-}
-````
-
-Et maintenant nous pouvons exécuter de jolis tests d'intégration automatisés, sans passer par IIS.
+Du coup maintenant nous pouvons exécuter de jolis tests d'intégration automatisés, sans passer par IIS.
 
 Le code source est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi)
