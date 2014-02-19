@@ -6,7 +6,7 @@ categories: [code, android, nightmare]
 comments: true
 ---
 
-Histoire de changer un peu mon quotidien, j'ai jeté un oeil a [Xamarin](https://xamarin.com/). Premiere épreuve, faire reconnaitre mon HTC One X par le debugger.
+Histoire de changer un peu mon quotidien, j'ai jeté un oeil à [Xamarin](https://xamarin.com/). Premiere épreuve, faire reconnaitre mon HTC One X par le debugger.
 
 Dans l'ordre :
 

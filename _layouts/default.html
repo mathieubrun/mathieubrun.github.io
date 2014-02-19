@@ -76,6 +76,12 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<script>
 	(function($) {
+		$("article section a[href^='http']")
+              .not("[href*='"+location.host+"']")
+              .attr('target','_blank')
+			  .addClass('external')
+			  .prepend('<i class="fa fa-external-link"></i> ');
+			  
 		// Append caption after pictures
 		$('.entry-content img').each(function(i) {
 			var alt = this.alt;
