@@ -61,16 +61,4 @@ Du coup, certains utilisateurs de ASP.NET MVC ont souhaité pour disposer des ca
 
 # Et concrètement, ca fait quoi ?
 
-## Des controllers
-
-## Envoyer des données
-
-## Recevoir des données
-
-## Utiliser des filtres
-
-## Injecter des dépendances
-
-## Tester facilement
-
-Mon [article précedent](/archive/2014/02/03/tests-unitaires-webapi-owin/) traite de ce sujet.
+La suite, au prochain épisode !
