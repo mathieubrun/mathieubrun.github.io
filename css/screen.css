@@ -17,6 +17,10 @@ article.post {
 	margin-bottom: 60px;
 }
 
+article section a.external {
+	font-style: italic;
+}
+
 article section a {
 	font-weight: bold;
 }
