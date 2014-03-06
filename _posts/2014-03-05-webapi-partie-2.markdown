@@ -61,7 +61,6 @@ public class CustomHeaderAttribute : ActionFilterAttribute
 {
 	public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
 	{
-		// add one random chuck norris fact to the response headers
 		actionExecutedContext.Response.Headers.Add("Hello-Header", "Hello world !");
 	}
 }
