@@ -21,6 +21,9 @@ disqus_show_comment_count: true
 google_analytics_tracking_id: UA-4184817-4
 google_analytics_site_name: mathieubrun.github.io
 
+# Quantcast
+quantcast_tracking_id: p-CRnYZb4H0vFLg
+
 addthis_profile_id: ra-52e6c6e305561232
 
 #
