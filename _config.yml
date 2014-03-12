@@ -18,7 +18,8 @@ disqus_short_name: cogimator
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: UA-4184817-1
+google_analytics_tracking_id: UA-4184817-4
+google_analytics_site_name: mathieubrun.github.io
 
 addthis_profile_id: ra-52e6c6e305561232
 
@@ -37,5 +38,3 @@ permalink: /archive/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "page/:num"
 category_dir: categories
-
-
