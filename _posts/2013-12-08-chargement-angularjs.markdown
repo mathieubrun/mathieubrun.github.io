@@ -74,5 +74,5 @@ Enfin, pour afficher tout ça, il nous faut un template :
 </div>
 ```` 
 
-Le code est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web/App/Loader).
+Le code est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web/App/Angular/Loader).
 
