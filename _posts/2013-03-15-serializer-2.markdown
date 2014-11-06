@@ -110,4 +110,4 @@ private object DeserializeObject(Type t, object target, ExtendedBinaryReader s)
 }
 ````
 
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Cogimator.Serialization/tree/e0041ac561158f8246007144eb00f20485411be3), ainsi que la [dernière version](https://github.com/mathieubrun/Cogimator.Serialization).
+Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

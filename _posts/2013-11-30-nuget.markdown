@@ -8,7 +8,7 @@ comments: true
 
 En préparant un projet de démo AngularJS + Bootrap + Web Api (article a venir !), j'ai eu besoin de générer des données de test. Après quelques recherches infructueuses, j'ai donc choisi de monter mon petit projet. Ca tombe bien, j'avais envie de coder un petit projet "utilitaire", et de me faire plaisir avec une API de type "Fluent".
 
-Une première version est dores et déjà disponible sur [github](https://github.com/mathieubrun/Cogimator.SampleDataGenerator). J'aurais l'occasion de vous en reparler dans un article à venir (ca commence a faire beaucoup d'articles à venir...).
+Une première version est dores et déjà disponible sur [github](https://github.com/mathieubrun/SampleDataGenerator). J'aurais l'occasion de vous en reparler dans un article à venir (ca commence a faire beaucoup d'articles à venir...).
 
 Apres l'avoir référencé "manuellement" dans mon projet de démo AngularJS, je me suis demandé comment optimiser le déploiement de mon générateur de données. Ca tombe bien, j'avais envie de créer un package nuget.
 
@@ -40,7 +40,7 @@ Etape 4 : publication manuelle
 
 La création du package est maintenant possible, avec la commande
 
-> .nuget\nuget.exe pack Cogimator.SampleDataGenerator\Cogimator.SampleDataGenerator.csproj
+> .nuget\nuget.exe pack SampleDataGenerator\SampleDataGenerator.csproj
 
 Nuget s'appuiera sur les .csproj et .nuspec pour générer le package.
 

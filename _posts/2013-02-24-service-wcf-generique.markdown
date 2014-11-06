@@ -29,4 +29,4 @@ Toutefois, le service ainsi déclaré ne pourra pas être utilisé dans IIS sans
     CodeBehind="GenericService.cs" %>
 ````
 
-Exemple complet sur : [GitHub](https://github.com/mathieubrun/Cogimator.Samples).
+Exemple complet sur : [GitHub](https://github.com/mathieubrun/Samples).

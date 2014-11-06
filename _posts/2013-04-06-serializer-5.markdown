@@ -25,4 +25,4 @@ public override void Serialize(ExtendedBinaryWriter writer, object source, Type 
 }
 ````
 
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Cogimator.Serialization/tree/ba41e95af67c08a1f6e760c535bc99b50f9329dc), ainsi que la [dernière version](https://github.com/mathieubrun/Cogimator.Serialization).
+Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).
