@@ -37,4 +37,4 @@ if (type.IsArray)
 
 La désérialisation est simplement le procédé inverse.
 
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Cogimator.Serialization/tree/7ab8d542c1bb2227d4d1bd8917192eb055e4c874), ainsi que la [dernière version](https://github.com/mathieubrun/Cogimator.Serialization).
+Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

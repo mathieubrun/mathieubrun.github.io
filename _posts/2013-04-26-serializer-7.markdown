@@ -181,4 +181,4 @@ l'appel a la méthode DeserializeBase, afin de s'appuyer sur les mécanismes imp
 
 Cette optimisation a permi de diviser par 3 le temps de serialisation/deserialisation (10000 iterations) d'une classe simple.
 
-Comme toujours, le code est disponible sur [github](https://github.com/mathieubrun/Cogimator.Serialization)
+Comme toujours, le code est disponible sur [github](https://github.com/mathieubrun/Samples.SerializerFun)
