@@ -6,7 +6,7 @@ categories: [c#, code]
 comments: true
 ---
 
-Une des dernières parties de cette série d'article concerne la sérialisation correcte des graphes d'objets, et surtout de leurs références. En effet, le tableau déclaré dé la manière suivante :
+Une des dernières parties de cette série d'article concerne la sérialisation correcte des graphes d'objets, et surtout de leurs références. En effet, le tableau déclaré de la manière suivante :
 
 ```` csharp
 var instance = new TestReference() { Str = "3" };
