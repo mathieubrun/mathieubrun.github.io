@@ -44,7 +44,7 @@ Il n'est plus nécessaire de conformer toutes les routes à des conventions qui 
 
 # La serialisation
 
-La sérialisation se fait de manière transparente : en fonction du content-type de la requête HTTP, la réponse sera sérialisée en JSON ou en XML par défaut. Des points d'entrées sont présents dans Web API pour personnaliser ce comportement : [http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters](http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters)
+La sérialisation se fait de manière transparente : en fonction du content-type de la requête HTTP, la réponse sera sérialisée en JSON ou en XML par défaut. Des points d'entrée sont présents dans Web API pour personnaliser ce comportement : [http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters](http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters)
 
 # Les filtres
 
