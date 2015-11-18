@@ -1,12 +1,12 @@
 #
 # Blog Settings
 #
-author: Mathieu
+author: Mathieu Brun
 description: One line after another...
 url: https://mathieubrun.github.io
-title: Cogimator
+title: Mathieu Brun
 subtitle: one line after another
-subscribe_rss: http://feeds.feedburner.com/Cogimator
+subscribe_rss: http://feeds.feedburner.com/mathieubrun
 encoding: UTF-8
 
 # Github repositories

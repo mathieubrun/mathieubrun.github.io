@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Cogimator</a>
+          <a class="navbar-brand" href="/">Mathieu Brun</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -71,6 +71,7 @@
 
 	<footer id="footer">{% include footer.html %}</footer>
 	
+	{% if site.addthis_profile_id %}<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{site.addthis_profile_id}}" async="async"></script>{% endif %}		
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<script>
