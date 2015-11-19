@@ -38,3 +38,7 @@ nav .next:after {
 	margin-top: 30px;
 	min-height: 300px
 }
+
+h2.year {
+	border-bottom: 1px solid gray;
+}
