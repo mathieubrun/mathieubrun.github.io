@@ -1,6 +1,6 @@
 {% if index %}
 	<header>
-		<h1 itemprop="name"><a href="{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+		<h1 itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h1>
 		{% include post/meta.html %}
 	</header>
 	
@@ -10,15 +10,16 @@
 		{% if excerpted == 'true' %}<a href="{{ post.url }}" class="more-link">{{ site.excerpt_link }}</a>{% endif %}
 		
 		{% include post/sharing.html %}		
-	</section>
-	
+	</section>	
 {% else %}
 
 	<header>
-		<h1 itemprop="name">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+		<h1 itemprop="name">{{ page.title }}</h1>
 		{% include post/meta.html %}
 	</header>
 	
-	<section class="entry-content" itemprop="articleBody">{{ content }}</section>
+	<section class="entry-content" itemprop="articleBody">
+		{{ content }}
+	</section>
 
 {% endif %}
