@@ -3,8 +3,11 @@ layout: default
 ---
 
 <article class="page">
-    {% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
-    <div class="entry-content">
+    {% if page.title %}
+		<h1 class="title">{{ page.title }}</h1>
+	{% endif %}
+	
+    <div>
 		{{ content }}
 	</div>
 </article>
