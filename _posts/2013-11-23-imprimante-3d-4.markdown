@@ -2,7 +2,7 @@
 layout: post
 title: "Améliorations matérielles"
 date: 2013-11-23 -0800
-categories: [3d printing]
+tags: [3d printing]
 comments: true
 ---
 

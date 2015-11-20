@@ -2,7 +2,7 @@
 layout: post
 title: "JQuery.AutoComplete et ASP.NET MVC : Partie 2"
 date: 2010-07-31 -0800
-categories: [javascript, mvc, code]
+tags: [jquery, asp.net-mvc]
 comments: true
 ---
 

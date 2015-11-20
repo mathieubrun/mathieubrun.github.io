@@ -2,7 +2,7 @@
 layout: post
 title: "Integration continue : Partie 4, Microsoft Source Analysis Tool for C#"
 date: 2008-05-25 -0800
-categories: [integration continue]
+tags: [integration continue]
 comments: true
 ---
 

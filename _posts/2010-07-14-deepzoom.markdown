@@ -2,7 +2,7 @@
 layout: post
 title: "Création d'images zoomables avec DeepZoom."
 date: 2010-07-14 -0800
-categories: [deepzoom, code]
+tags: [deepzoom]
 comments: true
 ---
 

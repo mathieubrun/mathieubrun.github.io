@@ -2,7 +2,7 @@
 layout: post
 title: "Implémentation d'un service WCF générique"
 date: 2013-02-24 -0800
-categories: [wcf, code]
+tags: [wcf]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Implémentation naïve d'un Serializer en C# - Partie 6"
 date: 2013-04-13 -0800
-categories: [c#, code]
+tags: [c#]
 comments: true
 ---
 

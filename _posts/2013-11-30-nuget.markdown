@@ -2,7 +2,7 @@
 layout: post
 title: "De 0 a un package Nuget"
 date: 2013-11-30 -0800
-categories: [nuget, github, teamcity, visual studio]
+tags: [nuget, github, teamcity, visual studio]
 comments: true
 ---
 

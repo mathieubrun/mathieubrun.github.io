@@ -2,7 +2,7 @@
 layout: post
 title: "VS 2010 Productivity Power Tools"
 date: 2010-07-21 -0800
-categories: [visual studio]
+tags: [visual studio]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Integration continue : Partie 2, Controle de code source"
 date: 2008-05-22 -0800
-categories: [integration continue]
+tags: [integration continue]
 comments: true
 ---
 

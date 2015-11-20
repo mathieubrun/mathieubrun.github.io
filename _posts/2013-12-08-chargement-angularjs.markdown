@@ -2,7 +2,7 @@
 layout: post
 title: "Indicateur de chargement AngularJs"
 date: 2013-12-08 -0800
-categories: [angularjs,code]
+tags: [angularjs]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Implémenter simplement un formulaire dynamique avec WPF"
 date: 2013-03-01 -0800
-categories: [wpf, code]
+tags: [wpf]
 comments: true
 ---
 

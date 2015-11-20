@@ -2,7 +2,7 @@
 layout: post
 title: "ASP.NET Web API, kesako ?"
 date: 2014-02-08 -0800
-categories: [code, ASP.NET Web API]
+tags: [asp.net-web-api]
 comments: true
 ---
 
