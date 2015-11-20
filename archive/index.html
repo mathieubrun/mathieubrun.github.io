@@ -9,7 +9,9 @@ layout: archive
 		{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
 		{% unless year == this_year %}
 			{% assign year = this_year %}
-			<h2>{{ date | date: "%Y" }}</h2>
+			<div class="row">
+				<h2 class="col-xs-push-3 col-xs-9">{{ date | date: "%Y" }}</h2>
+			</div>
 		{% endunless %}
 		<div class="row">
 			<div class="col-xs-3 text-right">
