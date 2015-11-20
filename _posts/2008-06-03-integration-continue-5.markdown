@@ -2,7 +2,7 @@
 layout: post
 title: "Integration continue : Partie 5, Tests unitaires"
 date: 2008-06-03 -0800
-categories: [integration continue]
+tags: [integration continue]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Premières calibrations de votre imprimante"
 date: 2013-07-05 -0800
-categories: [3d printing]
+tags: [3d printing]
 comments: true
 ---
 

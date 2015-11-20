@@ -2,7 +2,7 @@
 layout: post
 title: "Utilisation mémoire d'un processus .NET"
 date: 2013-04-19 -0800
-categories: [c#, performance]
+tags: [c#, performance]
 comments: true
 ---
 

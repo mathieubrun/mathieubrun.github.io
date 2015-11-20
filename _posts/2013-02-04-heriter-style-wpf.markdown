@@ -2,7 +2,7 @@
 layout: post
 title: "Hériter un style WPF par défaut"
 date: 2013-02-04 -0800
-categories: [wpf, code]
+tags: [wpf]
 comments: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Mise en cache intelligente des templates AngularJS"
 date: 2013-12-14 -0800
-categories: [angularjs, code]
+tags: [angularjs]
 comments: true
 ---
 

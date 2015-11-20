@@ -2,7 +2,7 @@
 layout: post
 title: "La surface d'impression"
 date: 2013-07-13 -0800
-categories: [3d printing]
+tags: [3d printing]
 comments: true
 ---
 

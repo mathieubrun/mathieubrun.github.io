@@ -2,7 +2,7 @@
 layout: post
 title: "Integration continue : Partie 1, Introduction"
 date: 2008-05-09 -0800
-categories: [integration continue]
+tags: [integration continue]
 comments: true
 ---
 

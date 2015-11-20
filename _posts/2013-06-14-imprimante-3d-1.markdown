@@ -2,7 +2,7 @@
 layout: post
 title: "Imprimante 3D, les premiers pas"
 date: 2013-06-14 -0800
-categories: [3d printing]
+tags: [3d printing]
 comments: true
 ---
 

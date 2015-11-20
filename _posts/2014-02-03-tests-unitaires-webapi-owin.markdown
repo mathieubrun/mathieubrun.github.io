@@ -2,7 +2,7 @@
 layout: post
 title: "Tests unitaires avec WebApi, Castle Windsor et OWIN"
 date: 2014-02-03 -0800
-categories: [code, ASP.NET Web API, OWIN, Castle Windsor]
+tags: [asp.net-web-api, owin, castle-windsor]
 comments: true
 ---
 

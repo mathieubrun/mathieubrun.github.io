@@ -2,7 +2,7 @@
 layout: post
 title: "Debugger un HTC One X sous windows 8"
 date: 2014-02-19 -0800
-categories: [code, android, nightmare]
+tags: [android]
 comments: true
 ---
 

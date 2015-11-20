@@ -2,7 +2,7 @@
 layout: post
 title: "Comment utiliser protobuf-net avec WCF"
 date: 2013-01-19 -0800
-categories: [wcf, code]
+tags: [wcf]
 comments: true
 ---
 [Protobuf-net](https://code.google.com/p/protobuf-net/) est l'implémentation .NET de protocol buffers mis au point par Google, qui l'utilise comme protocole de communication pour ses échanges de données. L'objectif est d'obtenir une sérialisation binaire de faible taille (largement moindre qu'une sérialisation XML par exemple), et peu coûteuse a sérialiser et désérialiser, autant coté serveur que client.
