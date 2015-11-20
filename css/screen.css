@@ -39,6 +39,10 @@ nav .next:after {
 	min-height: 300px
 }
 
-h2.year {
+article.archive h2 {
 	border-bottom: 1px solid gray;
+}
+
+article.archive  p.categories {
+	margin-top: 10px;
 }
