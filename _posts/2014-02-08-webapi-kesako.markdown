@@ -6,7 +6,7 @@ tags: [asp.net-web-api]
 comments: true
 ---
 
-# Un petit peu d'archéologie
+## Un petit peu d'archéologie
 
 - 1996 : ASP
 - 2002 : ASP.NET (Visual Studio 2003)
@@ -29,7 +29,7 @@ ASP.NET MVC change la donne, car il est distribué en tant que complément, et d
 
 En meme temps que le nombre d'utilisateurs d'application web augmente, leurs attentes envers ses applications augmentent également : interfaces plus riches, plus de réactivité...
 
-# Oui, et ?
+## Oui, et ?
 
 L'avènement des framework tels ASP.NET ont permi de simplifier une bonne partie du code pour développer des applications de plus en plus dynamiques, mais dans une certaine limite, tant d'un point de vue de maintenabilité que de performance.
 
@@ -49,7 +49,7 @@ ASP.NET MVC a apporté deux élements clés pour simplifier ce probleme
 - le routing, pour découpler facilement la localisation du fichier source représentant le service, et sont adresse http
 - le ModelbBinding, pour simplifier la sérialisation/désérialisation des données dans le flux HTTP
 
-# Et Web API dans tout ca ?
+## Et Web API dans tout ca ?
 
 Pendant ce temps la, d'autres patterns et habitudes commencaient a prendre de l'ampleur...
 
@@ -59,6 +59,6 @@ Enfin, le templating client a également pris de l'essor, toujours pour amélior
 
 Du coup, certains utilisateurs de ASP.NET MVC ont souhaité pour disposer des capacités de Routing, ModelBinding, etc, de ASP NET MVC, sans utiliser la partie templating. D'où la naissance de ASP.NET Web API.
 
-# Et concrètement, ca fait quoi ?
+## Et concrètement, ca fait quoi ?
 
 La suite, au prochain épisode !
