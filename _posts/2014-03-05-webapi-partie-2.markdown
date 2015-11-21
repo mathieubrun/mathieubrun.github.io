@@ -6,7 +6,7 @@ tags: [asp.net-web-api]
 comments: true
 ---
 
-# Le routing
+## Le routing
 
 Une nouveauté dans Web API 2.0 est le routing par attribut. Auparavant il était nécessaire de déclarer les routes selon des conventions :
 
@@ -42,11 +42,11 @@ Il n'est plus nécessaire de conformer toutes les routes à des conventions qui 
 - /clients/123/orders
 - /clients/123/orders/456
 
-# La serialisation
+## La serialisation
 
 La sérialisation se fait de manière transparente : en fonction du content-type de la requête HTTP, la réponse sera sérialisée en JSON ou en XML par défaut. Des points d'entrée sont présents dans Web API pour personnaliser ce comportement : [http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters](http://www.asp.net/web-api/overview/formats-and-model-binding/media-formatters)
 
-# Les filtres
+## Les filtres
 
 Tout comme ASP.NET MVC, les filtres permettent l'interception des actions des controlleurs, avant ou après l'exécution de celles ci. 
 
@@ -66,7 +66,7 @@ public class CustomHeaderAttribute : ActionFilterAttribute
 }
 ````
 
-# Les tests unitaires
+## Les tests unitaires
 
 La séparation des rôles apportée par Web API permet de facilement mettre en place des tests unitaires, avec ou sans mocking.
 
