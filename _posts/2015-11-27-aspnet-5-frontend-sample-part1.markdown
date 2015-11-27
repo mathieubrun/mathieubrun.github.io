@@ -164,4 +164,4 @@ And run both wiredep and injector tasks from task runner :
 ![Task runner](/img/2015-11-27-task-runner.png) 
 
 
-Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.FrontAspNet5/tree/master/Part1/)
+Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-1)
