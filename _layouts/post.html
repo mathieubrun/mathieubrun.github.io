@@ -3,27 +3,11 @@ layout: default
 single: true
 ---
 
-{% if page.previous.url %}
-<div class="row">
-	<nav class="col-xs-12">
-		<h4>Article précédent : <a href="{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a></h4>
-	</nav> 
-</div>
-{% endif %} 
-
 <div class="row">
 	<article class="col-xs-12" itemscope itemtype="http://schema.org/BlogPosting">
 		{% include article.html %}
 	</article>
 </div>
-
-{% if page.next.url %}
-<div class="row">
-	<nav class="col-xs-12 text-right">
-		<h4>Article suivant : <a href="{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a></h4>
-	</nav> 
-</div>
-{% endif %} 
 
 {% unless page.sharing == false %}
 <div class="row">
@@ -33,6 +17,19 @@ single: true
 </div>	
 {% endunless %}
 
+<div class="row">
+	<nav class="col-xs-6">
+	{% if page.previous.url %}
+		<h4>Previous post : <a href="{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a></h4>
+	{% endif %} 
+	</nav> 
+
+	<nav class="col-xs-6 text-right">
+	{% if page.next.url %}
+		<h4>Next post : <a href="{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a></h4>
+	{% endif %} 
+	</nav> 
+</div>
 
 {% if site.disqus_short_name and page.comments == true %}
 <div class="row">
