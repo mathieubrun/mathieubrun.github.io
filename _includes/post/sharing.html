@@ -1,16 +1,4 @@
-{% if site.addthis_profile_id %}
-<h4>Partager</h4>
 <div class="share">
-	<!-- AddThis Button BEGINs -->
-	<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="{{ site.url }}{{ page.url }}" addthis:title="{{ page.title }}">
-		<a class="addthis_button_preferred_1"></a>
-		<a class="addthis_button_preferred_2"></a>
-		<a class="addthis_button_preferred_3"></a>
-		<a class="addthis_button_preferred_4"></a>
-		<a class="addthis_button_compact"></a>
-		<a class="addthis_counter addthis_bubble_style"></a>
-	</div>
-	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-	<!-- AddThis Button END -->	  
+	<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="{{ site.url }}{{ page.url }}" data-text="{{ post.title }}" data-via="{{ site.twitter_handle }}">Tweet</a>
+	<script type="IN/Share" data-url="{{ site.url }}{{ page.url }}"></script>
 </div>
-{% endif %}
