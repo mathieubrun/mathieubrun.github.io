@@ -9,6 +9,14 @@ single: true
 	</article>
 </div>
 
+{% unless page.sharing == false %}
+<div class="row">
+	<div class="col-xs-12">
+		{% include post/sharing.html %}
+	</div>
+</div>	
+{% endunless %}
+
 <div class="row">
 	<nav class="col-xs-6">
 	{% if page.previous.url %}
@@ -22,14 +30,6 @@ single: true
 	{% endif %} 
 	</nav> 
 </div>
-
-{% unless page.sharing == false %}
-<div class="row">
-	<div class="col-xs-12">
-		{% include post/sharing.html %}
-	</div>
-</div>	
-{% endunless %}
 
 {% if site.disqus_short_name and page.comments == true %}
 <div class="row">

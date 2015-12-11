@@ -24,8 +24,6 @@ google_analytics_site_name: mathieubrun.github.io
 # Quantcast
 quantcast_tracking_id: p-CRnYZb4H0vFLg
 
-addthis_profile_id: ra-52e6c6e305561232
-
 #
 # Jekyll Settings
 #
@@ -41,3 +39,5 @@ permalink: /archive/:year/:month/:day/:title/
 paginate: 5
 paginate_path: "page/:num"
 category_dir: categories
+
+twitter_handle: "mathieu_b"
