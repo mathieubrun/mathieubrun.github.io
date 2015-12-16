@@ -12,11 +12,14 @@ In this part I'll continue automating testing, with [protractor](http://www.prot
 
 Add the following packages to the package.json file :
 
-- grunt-protractor-runner (version 2.1.2)
-- protractor (version 2.5.1)
+- grunt-protractor-runner
 - grunt-contrib-connect
 
-The key packages here are grunt-contrib-connect, and grunt-protractor-runner. The protractor and grunt-protractor-runner packages have to be [version 2.5.1 and 2.12 respectively](http://stackoverflow.com/questions/33818869/protactor-error-unexpected-token), otherwise you have to update to NodeJS V4.
+The key packages here are grunt-contrib-connect, and grunt-protractor-runner. The grunt-protractor-runner package version 3.0.0 relies on [nodejs version 4.0 at least](http://stackoverflow.com/questions/33818869/protactor-error-unexpected-token).
+
+Hopefully the update is easy : go to [the node website](https://nodejs.org), download the latest version, and make Visual Studio use it, in _Tools > Options > Projects and Solutions > External Web Tools_, and add the path to nodejs on top.
+
+![Visual studio config](/img/2015-12-16-node-path.png) 
 
 ### Connect grunt task
 
