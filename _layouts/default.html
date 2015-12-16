@@ -78,8 +78,7 @@
 		$("article section a[href^='http']")
               .not("[href*='"+location.host+"']")
               .attr('target','_blank')
-			  .addClass('external')
-			  .prepend('<i class="fa fa-external-link"></i> ');
+			  .addClass('external');
 			  
 		// Append caption after pictures
 		$('article img').each(function(i) {
