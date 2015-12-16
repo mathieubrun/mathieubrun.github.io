@@ -6,7 +6,7 @@ tags: [asp.net-5, angularjs]
 comments: true
 ---
 
-In this part I'll continue automating testing, which [protractor](http://www.protractortest.org) integration. This is straightforward but requires a little plumbing configuration!
+In this part I'll continue automating testing, with [protractor](http://www.protractortest.org) integration. This is straightforward but requires a little plumbing configuration!
 
 ### NPM packages used
 
