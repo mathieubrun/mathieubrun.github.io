@@ -30,14 +30,17 @@ quantcast_tracking_id: p-CRnYZb4H0vFLg
 
 # GitHub Defaults
 lsi: false
-pygments: true
-safe: true
+markdown: kramdown
+highlighter: rouge
 
 # UTF-8 & parse errors fix
-markdown: redcarpet
-permalink: /archive/:year/:month/:day/:title/
+permalink: /archive/:year/:month/:day/:title
 paginate: 5
-paginate_path: "page/:num"
+paginate_path: "/page/:num"
 category_dir: categories
 
 twitter_handle: "mathieu_b"
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
