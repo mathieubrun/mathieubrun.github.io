@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Angular2 + VS 2015 : Tour of heroes"
-date: 2016-03-14 -0800
+date: 2016-03-13 -0800
 tags: [asp.net-5, angular-2]
 comments: true
 ---
