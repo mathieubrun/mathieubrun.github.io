@@ -8,9 +8,13 @@ body {
 }
 
 article.post {
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	border-bottom: 2px dashed #cacaca;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
+}
+
+article section {
+	padding-top: 20px;
 }
 
 article section a.external {
