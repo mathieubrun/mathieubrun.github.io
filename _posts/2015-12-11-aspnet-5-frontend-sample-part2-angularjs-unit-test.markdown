@@ -2,7 +2,7 @@
 layout: post
 title: "Front end develoment using Visual Studio 2015, ASP.NET 5, and AngularJS - Part 2"
 date: 2015-12-11 -0800
-tags: [asp.net-5, angularjs]
+tags: [asp.net5, angularjs]
 comments: true
 ---
 

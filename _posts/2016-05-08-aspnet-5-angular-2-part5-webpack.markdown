@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Angular2 + VS 2015 : Webpack setup"
+title: "Angular2 + Visual Studio 2015 : Webpack setup"
 date: 2016-05-08 -0800
-tags: [asp.net-5, angular-2, webpack]
+tags: [asp.net5, angular2, webpack, visual studio 2015]
 comments: true
 ---
 

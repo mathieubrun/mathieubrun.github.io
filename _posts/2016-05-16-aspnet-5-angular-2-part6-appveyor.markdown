@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Angular2 + VS 2015 : Appveyor setup"
+title: "Angular2 + Visual Studio 2015 : Appveyor setup"
 date: 2016-05-16 -0800
-tags: [asp.net-5, angular-2, appveyor]
+tags: [asp.net5, angular2, appveyor, visual studio 2015]
 comments: true
 ---
 

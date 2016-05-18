@@ -2,7 +2,7 @@
 layout: post
 title: "Your first Angular 2 project with Visual Studio 2015"
 date: 2016-03-05 -0800
-tags: [asp.net-5, angular-2]
+tags: [asp.net5, angular2, visual studio 2015]
 comments: true
 ---
 

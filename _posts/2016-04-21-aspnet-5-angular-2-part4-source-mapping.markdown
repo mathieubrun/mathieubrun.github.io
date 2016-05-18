@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Angular2 + VS 2015 : Source maps"
+title: "Angular2 + Visual Studio 2015 : Source maps"
 date: 2016-04-21 -0800
-tags: [asp.net-5, angular-2]
+tags: [asp.net5, angular2, visual studio 2015]
 comments: true
 ---
 
