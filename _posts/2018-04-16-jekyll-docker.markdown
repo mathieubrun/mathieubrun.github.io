@@ -15,23 +15,33 @@ Here is the dockerfile:
 FROM ruby:alpine
 
 RUN apk add --no-cache \
-        bash \
         build-base \
         make && \
     gem install bundler
 
 EXPOSE 4000 
 
-COPY entrypoint.sh /usr/local/bin/
+ENTRYPOINT [ "sh", "-c" ]
 
-ENTRYPOINT [ "entrypoint.sh" ]
-
-CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0" ]
+CMD [ "bundle exec jekyll serve -H 0.0.0.0" ]
 ````
 
-The trick is to install build-base and make to allow for c modules compilation during bundle install. Bash is used for running our shell script as entrypoint.
+The trick is to install build-base and make to allow for c modules compilation during bundle install.
 
 And to run it, set working directory, bind mount it to current folder and that’s it. If you want to keep your installed ruby gems, you can bind mount them as well.
+
+First, install dependencies :
+
+```` sh
+docker run -ti \
+    --workdir '/code' \
+    -v "${PWD}:/code" \
+    -v "${PWD}/.gems:/usr/local/bundle" \
+    -p "4000:4000" \
+    mathieubrun/jekyll:latest install
+````
+
+And then run jekyll :
 
 ```` sh
 docker run -ti \
@@ -49,6 +59,12 @@ To try it out, run in either bash or powershell :
 ```` sh
 git clone https://github.com/mathieubrun/mathieubrun.github.io
 cd mathieubrun.github.io
+docker run -ti \
+    --workdir '/code' \
+    -v "${PWD}:/code" \
+    -v "${PWD}/.gems:/usr/local/bundle" \
+    -p "4000:4000" \
+    mathieubrun/jekyll:latest install
 docker run -ti \
     --workdir '/code' \
     -v "${PWD}:/code" \
