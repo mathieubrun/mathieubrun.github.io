@@ -41,6 +41,6 @@ category_dir: categories
 
 twitter_handle: "mathieu_b"
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap

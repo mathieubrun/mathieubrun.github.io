@@ -1,5 +1,8 @@
 _site
 .gems
+.jekyll-metadata
+
+Gemfile.lock
 
 # Windows image file caches
 Thumbs.db
