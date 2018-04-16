@@ -21,16 +21,16 @@ RUN apk add --no-cache \
 
 EXPOSE 4000 
 
-ENTRYPOINT [ "sh", "-c" ]
+ENTRYPOINT [ "bundle" ]
 
-CMD [ "bundle exec jekyll serve -H 0.0.0.0" ]
+CMD [ "exec", "jekyll", "serve", "-H", "0.0.0.0" ]
 ````
 
 The trick is to install build-base and make to allow for c modules compilation during bundle install.
 
 And to run it, set working directory, bind mount it to current folder and that’s it. If you want to keep your installed ruby gems, you can bind mount them as well.
 
-First, install dependencies :
+First, install dependencies (providing parameters after image name will override the CMD in dockerfile) :
 
 ```` sh
 docker run -ti \
