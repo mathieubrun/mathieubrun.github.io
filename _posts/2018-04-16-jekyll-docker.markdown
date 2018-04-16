@@ -12,7 +12,21 @@ I wanted to write a short post on development applications dockerisation. There 
 Here is the dockerfile:
 
 ```` docker
-{% github_sample mathieubrun/docker-jekyll/blob/master/Dockerfile %}
+FROM ruby:alpine
+
+RUN apk add --no-cache \
+        bash \
+        build-base \
+        make && \
+    gem install bundler
+
+EXPOSE 4000 
+
+COPY entrypoint.sh /usr/local/bin/
+
+ENTRYPOINT [ "entrypoint.sh" ]
+
+CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0" ]
 ````
 
 The trick is to install build-base and make to allow for c modules compilation during bundle install. Bash is used for running our shell script as entrypoint.
