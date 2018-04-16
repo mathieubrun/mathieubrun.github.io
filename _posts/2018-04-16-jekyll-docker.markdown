@@ -57,4 +57,4 @@ docker run -ti \
     mathieubrun/jekyll:latest
 ````
 
-And then open your browser to localhost:4000 !
+And then open your browser to [localhost:4000](localhost:4000) !
