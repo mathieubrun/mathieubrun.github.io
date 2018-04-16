@@ -44,3 +44,4 @@ twitter_handle: "mathieu_b"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll_github_sample
