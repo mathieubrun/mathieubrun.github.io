@@ -4,9 +4,10 @@ title: "Your first Angular 2 project with Visual Studio 2015"
 date: 2016-03-05 -0800
 tags: [asp.net5, angular2, visual studio 2015]
 comments: true
+github: "https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-1"
 ---
 
-Building your first Angular2 app using Visual Studio 2015 is quite simple. Let's have a look at what's inside a simple hello world app. Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-1), just clone, let npm download packages, and run the sample !
+Building your first Angular2 app using Visual Studio 2015 is quite simple. Let's have a look at what's inside a simple hello world app. 
 
 This sample is based on [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html), by adapting it to run on Visual Studio 2015. Following are some key points.
 

@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 5"
 date: 2013-04-06 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 Après avoir refactorisé le code du Serializer, j'ai choisi d'implémenter la sérialisation des implémentations d'interfaces. En effet, si un objet possède des propriétés de type interface (IList<T> par exemple), ce n'est pas pour autant qu'il ne doit pas pouvoir être sérialisable.
@@ -24,5 +25,3 @@ public override void Serialize(ExtendedBinaryWriter writer, object source, Type 
     base.Serialize(writer, source, st);
 }
 ````
-
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

@@ -4,6 +4,7 @@ title: "Implémenter simplement un formulaire dynamique avec WPF"
 date: 2013-03-01 -0800
 tags: [wpf]
 comments: true
+github: "https://github.com/mathieubrun/Samples"
 ---
 
 En s'appuyant sur les DataTemplates et les capacités de binding de WPF, on peut très facilement mettre en place des formulaires dynamiques. La première étape est de définir les classes qui serviront à définir les éléments de notre formulaire :
@@ -59,5 +60,3 @@ Et pour finir, il reste juste a ajouter les éléments dans un conteneur :
 ````
 
 Tout le reste est géré par WPF, qui, au travers des DataTemplates et du Binding affichera les contrôles nécessaires pour remplir nos éléments.
-
-Le code source complet est disponible sur [Github](https://github.com/mathieubrun/Samples)

@@ -5,6 +5,7 @@
 	</header>
 	
 	<section itemprop="articleBody">
+		{{ if post.github }}<p>The source repository for this article is on <a href="{{ post.github }}">github</a></p>{{ endif }}
 		{{ content | excerpt }}
 		{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
 		{% if excerpted == 'true' %}<a href="{{ post.url }}" class="more-link">{{ site.excerpt_link }}</a>{% endif %}
@@ -19,6 +20,7 @@
 	</header>
 	
 	<section class="entry-content" itemprop="articleBody">
+		{{ if post.github }}<p>The source repository for this article is on <a href="{{ post.github }}">github</a></p>{{ endif }}
 		{{ content }}
 	</section>
 

@@ -4,6 +4,7 @@ title: "Front end develoment using Visual Studio 2015, ASP.NET 5, and AngularJS 
 date: 2015-12-16 -0800
 tags: [asp.net5, angularjs]
 comments: true
+github: "https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-3"
 ---
 
 In this part I'll continue automating testing, with [protractor](http://www.protractortest.org) integration. This is straightforward but requires a little plumbing configuration!
@@ -77,6 +78,4 @@ exports.config = {
 
 Running this task will produce the following in task runner explorer console :
 
-![Protractor runner](/img/2015-12-16-protractor.png) 
-
-Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-3)
+![Protractor runner](/img/2015-12-16-protractor.png)

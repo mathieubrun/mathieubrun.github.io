@@ -4,11 +4,10 @@ title: "Angular2 + Visual Studio 2015 : Tour of heroes"
 date: 2016-03-13 -0800
 tags: [asp.net5, angular2, visual studio 2015]
 comments: true
+github: "https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-2"
 ---
 
 This series sample will convert the [Tour of heroes](https://angular.io/docs/ts/latest/tutorial/) sample application from [angular.io](https://angular.io/docs). 
-
-As usual, the source is available on [Github here](https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-2).
 
 ### Getting things up and running
 

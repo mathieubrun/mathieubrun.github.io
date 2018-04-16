@@ -4,6 +4,7 @@ title: "Implémentation d'un service WCF générique"
 date: 2013-02-24 -0800
 tags: [wcf]
 comments: true
+github: "https://github.com/mathieubrun/Samples"
 ---
 
 Parfois on peut être améné à vouloir déclarer un service de manière générique :
@@ -28,5 +29,3 @@ Toutefois, le service ainsi déclaré ne pourra pas être utilisé dans IIS sans
     Service="WcfService.GenericService`1[[WcfInterfaces.SpecificEntity, WcfInterfaces]]" 
     CodeBehind="GenericService.cs" %>
 ````
-
-Exemple complet sur : [GitHub](https://github.com/mathieubrun/Samples).

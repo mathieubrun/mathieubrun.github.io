@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 4"
 date: 2013-03-29 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 Après avoir implémenté le support de la sérialisation des tableaux,  le code est devenu moins lisible. En effet, toute la logique pour le choix du type d'objet à sérialiser se faisait dans une seule méthode,  bardée de ifs. Le but de cette implémentation étant de m'amuser, je ne pouvais laisser cette situation perdurer.
@@ -63,5 +64,3 @@ public override void Serialize(ExtendedBinaryWriter writer, object source, Type 
 ````
 
 De cette manière,  ajouter le support pour de nouveaux types devient l'affaire d'implémenter un nouveau ISubSerializer et de le déclarer dans le serializer racine.
-
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

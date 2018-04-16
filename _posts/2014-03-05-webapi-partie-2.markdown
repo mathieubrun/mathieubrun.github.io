@@ -4,6 +4,7 @@ title: "ASP.NET Web API, kesako ? La suite"
 date: 2014-03-05 -0800
 tags: [asp.net-web-api]
 comments: true
+github: "https://github.com/mathieubrun/Samples.AngularBootstrapWebApi"
 ---
 
 ## Le routing
@@ -71,5 +72,3 @@ public class CustomHeaderAttribute : ActionFilterAttribute
 La séparation des rôles apportée par Web API permet de facilement mettre en place des tests unitaires, avec ou sans mocking.
 
 Il est également possible de faire des tests de bout en bout : [Tests unitaires avec WebApi, Castle Windsor et OWIN](/archive/2014/02/03/tests-unitaires-webapi-owin/)
-
-Le code source est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi)

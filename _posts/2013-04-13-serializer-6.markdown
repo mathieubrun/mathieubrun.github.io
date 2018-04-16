@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 6"
 date: 2013-04-13 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 Une des dernières parties de cette série d'article concerne la sérialisation correcte des graphes d'objets, et surtout de leurs références. En effet, le tableau déclaré de la manière suivante :
@@ -83,5 +84,3 @@ En résumé, pour la sérialisation, on identifie chaque objet sérialisé, et s
 La subtilité concerne les références cycliques : il faut placer l'objet dans le cache juste après sa création, car lorsque l'on va désérialiser les propriétés de l'objet, on pourrait rencontrer une référence vers un objet que l'on n'aurait pas encore désérialisé.
 
 Comme toujours, les tests unitaires permettent de valider que les modifications n'entrainent pas de régressions.
-
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

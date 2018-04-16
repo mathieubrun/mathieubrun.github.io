@@ -4,6 +4,7 @@ title: "Front end develoment using Visual Studio 2015, ASP.NET 5, and AngularJS 
 date: 2015-12-11 -0800
 tags: [asp.net5, angularjs]
 comments: true
+github: "https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-2"
 ---
 
 In this part I'll dive into unit testing your AngularJS code. Not so much on the test specs details, as there are enough documentation on those. I'll show how to set up a nice workflow which will set up tests as they're added, and run them automatically when you edit you javascript code, and create code coverage reports.
@@ -119,5 +120,3 @@ Finally, should you want to debug your tests, you can add the [Jasmine html runn
 Then you can just run it from the file system :
 
 ![Html runner](/img/2015-12-11-runner.png) 
-
-Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-2)

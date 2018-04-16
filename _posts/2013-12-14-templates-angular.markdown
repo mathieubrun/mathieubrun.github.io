@@ -4,6 +4,7 @@ title: "Mise en cache intelligente des templates AngularJS"
 date: 2013-12-14 -0800
 tags: [angularjs]
 comments: true
+github: "https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web"
 ---
 
 Avant de rentrer dans le vif du sujet, petit rappel sur le fonctionnement du cache du navigateur.
@@ -66,5 +67,3 @@ La suite de l'implémentation est aisée, grâce au système de HttpInterceptors
 Voici les résultats dans fiddler. Les requêtes sur l'url "/" correspondent a un rafraichissement de la page du navigateur. Le serveur web utilisé est IIS Express, sans paramétrage spécifique.
 
 ![Capture fiddler](/img/2013-12-14-templates-angular.png)
-
-Le code source est disponible sur [github](https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web)

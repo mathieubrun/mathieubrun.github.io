@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Angular2 + Visual Studio 2015 : Appveyor setup"
+title: "Angular2 + Visual Studio 2015 : Appveyor setup"
 date: 2016-05-16 -0800
 tags: [asp.net5, angular2, appveyor, visual studio 2015]
 comments: true
+github: "https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-6"
 ---
-
-As usual, the source is available on [Github here](https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-6).
 
 This part will add continuous integration using [AppVeyor](https://www.appveyor.com). They're free for projects hosted on github public repositories, so, let's go!
 

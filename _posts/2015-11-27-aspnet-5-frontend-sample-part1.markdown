@@ -4,6 +4,7 @@ title: "Front end develoment using Visual Studio 2015, ASP.NET 5, and AngularJS 
 date: 2015-11-27 -0800
 tags: [asp.net5, angularjs]
 comments: true
+github: "https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-1"
 ---
 
 Front end development capabilities saw a huge boost with the release of Visual Studio 2015 and the seamless integration of Npm, Grunt and Bower. In the first part of this series I'll summarize quickly how to get started creating an AngularJS and ASP.NET 5 WebApi application. First of all, you'll need the following tools:
@@ -162,5 +163,3 @@ Finally, add an angularjs controller inside an app folder :
 And run both wiredep and injector tasks from task runner :
 
 ![Task runner](/img/2015-11-27-task-runner.png) 
-
-Full code for this part is available on [Github](https://github.com/mathieubrun/Samples.FrontAspNet5/tree/dev-part-1)

@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 7"
 date: 2013-04-26 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 La dernière ligne droite dans l'implémentation de ce Serializer était d'avoir des performances similaires (ou meilleures!) à celles du [BinaryFormatter](http://msdn.microsoft.com/en-us/library/system.runtime.serialization.formatters.binary.binaryformatter.aspx) du Framework .Net. En utilisant uniquement la reflection, ce n'était pas gagné d'avance.
@@ -180,5 +181,3 @@ l'appel a la méthode DeserializeBase, afin de s'appuyer sur les mécanismes imp
 - la génération d'un bloc de code pour la désérialisation de chaque champ
 
 Cette optimisation a permi de diviser par 3 le temps de serialisation/deserialisation (10000 iterations) d'une classe simple.
-
-Comme toujours, le code est disponible sur [github](https://github.com/mathieubrun/Samples.SerializerFun)

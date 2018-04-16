@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 2"
 date: 2013-03-29 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 Pour la suite de cette série, je vais vous présenter le fonctionnement de la 1ere itération du serializer. Cette version supporte les types de base, nullables ou non, ainsi que les graphes d'objets simples (pas de cycles, pas de tableaux).
@@ -109,5 +110,3 @@ private object DeserializeObject(Type t, object target, ExtendedBinaryReader s)
 	return target;
 }
 ````
-
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).

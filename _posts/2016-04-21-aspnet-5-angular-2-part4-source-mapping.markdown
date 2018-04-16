@@ -4,11 +4,10 @@ title: "Angular2 + Visual Studio 2015 : Source maps"
 date: 2016-04-21 -0800
 tags: [asp.net5, angular2, visual studio 2015]
 comments: true
+github: "https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-4"
 ---
 
 This series sample will convert the [Tour of heroes](https://angular.io/docs/ts/latest/tutorial/) sample application from [angular.io](https://angular.io/docs). 
-
-As usual, the source is available on [Github here](https://github.com/mathieubrun/Samples.Angular2/tree/dev-part-4).
 
 This part will add source map support, for easier typescript debugging using Chrome tools.
 

@@ -4,6 +4,7 @@ title: "Implémentation naïve d'un Serializer en C# - Partie 3"
 date: 2013-03-29 -0800
 tags: [c#]
 comments: true
+github: "https://github.com/mathieubrun/Samples.SerializerFun"
 ---
 
 Cette semaine, l'itération suivante de notre serializer supporte les tableaux d'objets.
@@ -36,5 +37,3 @@ if (type.IsArray)
 ````
 
 La désérialisation est simplement le procédé inverse.
-
-Le code source de cet article est disponible sur [GitHub](https://github.com/mathieubrun/Samples.SerializerFun).
