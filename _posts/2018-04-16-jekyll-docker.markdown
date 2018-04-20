@@ -7,7 +7,7 @@ comments: true
 github: "https://github.com/mathieubrun/docker-jekyll"
 ---
 
-I wanted to write a short post on development applications dockerisation. There was a small issue though: I no more had ruby and associated bundles installed… it turned out that creating a docker image containing everything necessary to run jekyll was in fact quite easy. 
+I wanted to write a short post on development applications dockerisation. There was a small issue though: I no more had ruby and associated bundles installed… it turned out that creating a docker image containing everything necessary to run jekyll was in fact quite easy.
 
 Here is the dockerfile:
 
@@ -19,7 +19,7 @@ RUN apk add --no-cache \
         make && \
     gem install bundler
 
-EXPOSE 4000 
+EXPOSE 4000
 
 ENTRYPOINT [ "bundle" ]
 
