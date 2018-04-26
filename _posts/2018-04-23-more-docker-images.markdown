@@ -8,19 +8,17 @@ comments: true
 
 After writing the jekyll docker image, I did not want to stop there and continued to create more images for future posts.
 
-The process is finally quite simple, for example, for example here is the [ganache-cli](https://github.com/trufflesuite/ganache-cli) dockerfile :
+The process is finally quite simple, for example, for example here is the [figlet](http://www.figlet.org/) dockerfile :
 
 ```` docker
-FROM node:8.10.0-alpine
+FROM alpine:3.6
 
-RUN npm install -g ganache-cli
+RUN apk add --no-cache figlet
 
-EXPOSE 8545
-
-ENTRYPOINT [ "ganache-cli" ]
+ENTRYPOINT ["figlet"]
 ````
 
-After creating a [github repository](https://github.com/mathieubrun/docker-ganache-cli), and an automated build on [docker hub](LINK LINK), all pushes on github will trigger a build. I like this process for the transparency it provides :
+After creating a [github repository](https://github.com/mathieubrun/docker-figlet), and an automated build on [docker hub](https://hub.docker.com/r/mathieubrun/figlet/), all pushes on github will trigger a build. I like this process for the transparency it provides :
 
 - transparency for the image maintener, push, and build will occur
 - transparency for image users, as the repository and dockerfile are de facto linked.
