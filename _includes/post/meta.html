@@ -1,8 +1,0 @@
-<h5 class="meta">
-	<span class="fa fa-calendar">{% include post/date.html %}{{ time }}</span>
-	<span class="fa fa-tag">{% for tag in page.tags %}<a href="/archive/tags.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a> {% endfor %}{% for tag in post.tags %}<a href="/archive/tags.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a> {% endfor %}</span>
-	{% if site.disqus_short_name and site.disqus_show_comment_count == true %}
-	<span class="fa fa-comments"><a href="{{ post.url }}#disqus_thread">comments</a></span>
-	{% endif %}
-	<span class="fa fa-edit">{% if post.url %}{% assign path = post.path %}{% else %}{% assign path = page.path %}{% endif %}<a href="{{ site.github_repo_url }}edit/master/{{ path }}">edit</a></span>
-</h5>

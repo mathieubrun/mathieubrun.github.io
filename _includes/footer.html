@@ -1,4 +1,11 @@
-<p class="text-center">
-  Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} <em>Content licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a></em>
-</p>
-
+{% if site.theme_settings.footer_text %}
+<footer class="site-footer">
+    <p class="text">{{ site.theme_settings.footer_text }}</p>
+    <div class="footer-icons">
+        <ul>
+            <!-- Social icons from Font Awesome, if enabled -->
+            {% include icons.html %}
+        </ul>
+    </div>
+</footer>
+{% endif %}

@@ -1,40 +1,32 @@
 ---
 layout: default
-single: true
 ---
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <header id="main" style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
+    <p class="meta">
+    {{ page.date | date: "%B %-d, %Y" }}
+    {% if page.author %} - {{ page.author }}{% endif %}
+    </p>
+  </header>
+  {% if page.github %}<p>The source repository for this article is on <a href="{{ page.github }}">Github</a>.</p>{% endif %}
 
-<div class="row">
-	<article class="col-xs-12" itemscope itemtype="http://schema.org/BlogPosting">
-		{% include article.html %}
-	</article>
+  <section class="post-content">{{ content }}</section>
+   
+   <!-- Tag list -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+    
+</article>
+
+<!-- Disqus -->
+{% if site.theme_settings.disqus_shortname %}
+<div class="comments">
+  {% include disqus.html %}
 </div>
+{% endif %}
 
-{% unless page.sharing == false %}
-<div class="row">
-	<div class="col-xs-12">
-		{% include post/sharing.html %}
-	</div>
-</div>	
-{% endunless %}
-
-<div class="row">
-	<nav class="col-xs-6">
-	{% if page.previous.url %}
-		<h4>Previous post : <a href="{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a></h4>
-	{% endif %} 
-	</nav> 
-
-	<nav class="col-xs-6 text-right">
-	{% if page.next.url %}
-		<h4>Next post : <a href="{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a></h4>
-	{% endif %} 
-	</nav> 
-</div>
-
-{% if site.disqus_short_name and page.comments == true %}
-<div class="row">
-	<section id="comment" class="col-xs-12">
-		<div id="disqus_thread" aria-live="polite">{% include disqus.html %}</div>
-	</section>
-</div>
+<!-- Post navigation -->
+{% if site.theme_settings.post_navigation %}
+  {% include post_nav.html %}
 {% endif %}

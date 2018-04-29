@@ -1,46 +1,100 @@
-#
-# Blog Settings
-#
-author: Mathieu Brun
-description: One line after another...
-url: https://mathieubrun.github.io
-title: Mathieu Brun
-subtitle: one line after another
-subscribe_rss: http://feeds.feedburner.com/mathieubrun
-encoding: UTF-8
+# SITE CONFIGURATION
+baseurl: ""
+url: "https://mathieubrun.github.io"
+title: "Mathieu Brun" # site's title
+description: "Code sample and devops" # used by search engines
 
-# Github repositories
-github_user: mathieubrun
-github_repo_url: https://github.com/mathieubrun/mathieubrun.github.io/
 
-# Disqus Comments
-disqus_short_name: mathieubrungithubio
-disqus_show_comment_count: true
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: "Mathieu Brun" # blog's title
+  # avatar: assets/img/triangle.svg
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
 
-# Google Analytics
-google_analytics_tracking_id: UA-4184817-4
-google_analytics_site_name: mathieubrun.github.io
+  # Header and footer text
+  header_text: > #two or three lines to describe your site
+    <p>One line after another</p>
+  header_text_feature_image: assets/img/pexels/computer.jpeg
+  footer_text: >
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">Github pages</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-# Quantcast
-quantcast_tracking_id: p-CRnYZb4H0vFLg
+  # Icons
+  rss: true  # Make sure you created a feed.xml with feed.xml layout
+  email_address: # Full email address, e.g. "sam@example.com"
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  gitlab:
+  github: "mathieubrun"
+  google_plus:
+  instagram:
+  keybase:
+  linkedin: "https://www.linkedin.com/in/mathieubrun/"
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  "https://stackoverflow.com/users/971/mathieu"
+  steam:
+  tumblr:
+  twitter: "mathieu_b"
+  vimeo:
+  wordpress:
+  youtube:
 
-#
-# Jekyll Settings
-#
+  # Scripts / Features 
+  google_analytics: "UA-4184817-4"
+  disqus_shortname: "mathieubrungithubio"
+  katex: false # Enable if using math markup
+  
+  special_page:
+    search: 
+      icon: "search"
+      enabled: true
+    tags:
+      icon: "tags"
+      enabled: true
+  
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
 
-# GitHub Defaults
-lsi: false
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: true
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# PORTFOLIO
+collections:
+  portfolio:
+    output: false
+    permalink: /:collection/:name
+
+
+# BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
 
-# UTF-8 & parse errors fix
-permalink: /archive/:year/:month/:day/:title
-paginate: 5
-paginate_path: "/page/:num"
-category_dir: categories
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
-twitter_handle: "mathieu_b"
-
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
