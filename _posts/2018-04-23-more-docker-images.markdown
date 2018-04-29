@@ -3,6 +3,7 @@ layout: post
 title: "More docker !"
 date: 2018-04-23 -0800
 tags: [docker, "build automation"]
+feature-img: "assets/img/pexels/business-cargo-cargo-container-163726.jpg"
 comments: true
 ---
 

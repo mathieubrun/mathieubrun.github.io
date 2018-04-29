@@ -4,6 +4,7 @@ title: "Dockerizing Jekyll"
 date: 2018-04-16 -0800
 tags: [jekyll, docker]
 comments: true
+feature-img: "assets/img/pexels/blogging-business-coding-34578.jpg"
 github: "https://github.com/mathieubrun/docker-jekyll"
 ---
 

@@ -4,6 +4,7 @@ title: "Ethereum blockchain interaction with Nethereum"
 date: 2018-04-29 -0800
 tags: [c#, docker, ethereum, netstandard]
 comments: true
+feature-img: "assets/img/pexels/bitcoin-blockchain-business-730569.jpg"
 github: "https://github.com/mathieubrun/sample-nethereum-truffle"
 ---
 
