@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 /*
  * Make the header images move on scroll
  */
-$(window).scroll(function () {
-    var x = $(this).scrollTop();   
-    $('#main').css('background-position', '100% ' + parseInt(-x/3) + 'px' + ', 0%, center top');
+window.addEventListener('scroll', function() {
+    var x = window.pageYOffset | document.body.scrollTop;
+    var m = document.getElementById("main"), c = m.style;
+    
+    c.backgroundPosition = '100% ' + parseInt(-x/3) + 'px' + ', 0%, center top';
 });
