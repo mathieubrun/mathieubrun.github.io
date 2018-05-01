@@ -1,3 +1,7 @@
+import "./../css/type-on-strap.scss";
+import "font-awesome/css/font-awesome.css"
+
+// external links
 document.addEventListener("DOMContentLoaded", function(event) { 
     var links = document.links;
 
@@ -8,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 });
 
-/*
- * Make the header images move on scroll
- */
+// Make the header images move on scroll
 window.addEventListener('scroll', function() {
     var x = window.pageYOffset | document.body.scrollTop;
     var m = document.getElementById("main"), c = m.style;

@@ -2,6 +2,7 @@ _site
 .gems
 .jekyll-metadata
 .sass-cache
+node_modules
 
 Gemfile.lock
 
@@ -17,3 +18,5 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+yarn-error.log
