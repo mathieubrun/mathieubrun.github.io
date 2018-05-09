@@ -82,11 +82,17 @@ We'll be using the sample from Nethereum documentation :
 ```` solidity
 contract test {
     uint _multiplier;
+
+    event Multiplied(uint indexed a, address indexed sender, uint result);
+
     function test(uint multiplier){
         _multiplier = multiplier;
     }
-    function multiply(uint a) returns(uint d) {
-        return a * _multiplier;
+
+    function multiply(uint a) returns(uint r) {
+        r = a * _multiplier;
+        emit Multiplied(a, msg.sender, r);
+        return r;
     }
 }
 ````
