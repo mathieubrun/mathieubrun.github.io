@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ethereum blockchain interaction with Nethereum"
+title: "Ethereum blockchain interaction with Nethereum - part 1"
 date: 2018-04-29 -0800
 tags: [c#, docker, ethereum, netstandard]
 comments: true
@@ -79,7 +79,7 @@ Interacting with ethereum blockchain involves a few steps.
 
 We'll be using the sample from Nethereum documentation :
 
-```` solidity
+```` js
 contract test {
     uint _multiplier;
 
