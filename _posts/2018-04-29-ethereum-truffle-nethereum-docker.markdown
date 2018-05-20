@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ethereum blockchain interaction with Nethereum - part 1"
+title: "Ethereum blockchain interaction with Nethereum"
 date: 2018-04-29 -0800
 tags: [c#, docker, ethereum, netstandard]
 comments: true
