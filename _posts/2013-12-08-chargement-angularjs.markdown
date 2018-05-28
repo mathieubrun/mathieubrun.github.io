@@ -4,7 +4,7 @@ title: "Indicateur de chargement AngularJs"
 date: 2013-12-08 -0800
 tags: [angularjs]
 comments: true
-github: "https://github.com/mathieubrun/Samples.AngularBootstrapWebApi/tree/master/SampleApplication.Web/App/Angular/Loader"
+github: "https://github.com/mathieubrun/sample-angularjs-webapi-bootstrap/tree/master/SampleApplication.Web/App/Angular/Loader"
 ---
 
 Depuis la version 1.2.0 de AngularJs, le service [$resource](http://docs.angularjs.org/api/ngResource.$resource) retourne des promise lors des appels aux méthodes get, query, save... Ceci ouvre des possibilités intéressantes, notamment la mise en place rapide d'indication de chargement.

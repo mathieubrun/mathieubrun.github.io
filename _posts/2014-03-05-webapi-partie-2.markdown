@@ -4,7 +4,7 @@ title: "ASP.NET Web API, kesako ? La suite"
 date: 2014-03-05 -0800
 tags: [asp.net-web-api]
 comments: true
-github: "https://github.com/mathieubrun/Samples.AngularBootstrapWebApi"
+github: "https://github.com/mathieubrun/sample-angularjs-webapi-bootstrap"
 ---
 
 ## Le routing

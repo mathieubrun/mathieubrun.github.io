@@ -4,7 +4,7 @@ title: "Tests unitaires avec WebApi, Castle Windsor et OWIN"
 date: 2014-02-03 -0800
 tags: [asp.net-web-api, owin, castle-windsor]
 comments: true
-github: "https://github.com/mathieubrun/Samples.AngularBootstrapWebApi"
+github: "https://github.com/mathieubrun/sample-angularjs-webapi-bootstrap"
 ---
 
 Une des grosses forces de ASP.NET Web API est sa modularité. Celle ci facilite la mise en place des principes [SOLID](http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29), le S, pour Separation of Concerns, en particulier.
