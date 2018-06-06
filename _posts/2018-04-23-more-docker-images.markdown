@@ -50,6 +50,6 @@ function jekyll() {
 }
 ````
 
-For more aliases, you can have a look at my [ShellScripts github repository](https://github.com/mathieubrun/ShellScripts).
+For more aliases, you can have a look at my [shell-scripts github repository](https://github.com/mathieubrun/shell-scripts).
 
 I'm starting to uninstall all those command line development tools and to convert them to docker images. Not only does it limit clutter on my system, but also simplifies my life when I move from one computer to another : as long as Docker is installed I'm good to go.
