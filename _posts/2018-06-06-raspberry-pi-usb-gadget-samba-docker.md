@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Including usb gadget, docker and samba to a ready to use Raspbian SD card image"
+title: "Including usb gadget, wifi setup and docker to a ready to use Raspbian SD card image"
 date: 2018-06-06 -0800
 tags: [docker, iot, raspberry]
 comments: true
@@ -84,6 +84,8 @@ And set the samba user password :
 ```` sh
 echo -ne "${PI_PASSWD}\n${PI_PASSWD}\n" | smbpasswd -a -s pi
 ````
+
+Update : I removed samba from the image, it was simplier to rsync the files !
 
 ## adding docker
 
